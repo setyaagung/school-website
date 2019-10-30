@@ -15,8 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $table = 'users';
-    protected $primaryKey = 'id_user';
+
     protected $fillable = [
         'role', 'name', 'email', 'password',
     ];
@@ -38,4 +37,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function berita()
+    {
+        return $this->hasMany(Berita::class);
+    }
 }

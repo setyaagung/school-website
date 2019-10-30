@@ -11,11 +11,12 @@
 |
 */
 //Login
-Route::get('/admin', 'AuthController@admin')->name('admin');
+Route::get('/admin', 'AuthController@admin')->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout', 'AuthController@logout');
 
 Route::group(['middleware' => ['auth', 'checkRole:Administrator']], function () {
-    Route::get('/dashboard', 'DashboardController@index');
-    Route::resource('user', 'UserController');
+    Route::get('/admin/dashboard', 'DashboardController@index');
+    Route::resource('/admin/user', 'UserController');
+    Route::resource('/admin/berita', 'BeritaController');
 });

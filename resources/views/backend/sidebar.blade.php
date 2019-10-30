@@ -1,6 +1,6 @@
 <!-- Nav Item - Dashboard -->
-<li class="nav-item {{'dashboard' == request()->path() ? 'active' : ''}}">
-    <a class="nav-link" href="/dashboard">
+<li class="nav-item {{'admin/dashboard' == request()->path() ? 'active' : ''}}">
+    <a class="nav-link" href="/admin/dashboard">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
@@ -74,15 +74,15 @@
   </li>
 
   <!-- Nav Item - Charts -->
-  <li class="nav-item">
-    <a class="nav-link" href="charts.html">
-      <i class="fas fa-fw fa-chart-area"></i>
-      <span>Charts</span></a>
+  <li class="nav-item {{'admin/berita' == request()->path() ? 'active' : ''}}">
+    <a class="nav-link" href="/admin/berita">
+      <i class="fas fa-fw fa-newspaper"></i>
+      <span>Berita</span></a>
   </li>
 
   <!-- Nav Item - Tables -->
-  <li class="nav-item {{'user' == request()->path() ? 'active' : ''}}">
-    <a class="nav-link" href="/user">
+  <li class="nav-item {{'admin/user' == request()->path() ? 'active' : ''}}">
+    <a class="nav-link" href="/admin/user">
       <i class="fas fa-fw fa-user"></i>
       <span>Users</span></a>
   </li>
