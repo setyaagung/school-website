@@ -1,33 +1,51 @@
-@extends('backend/main')
+@extends('backend.main')
 
-@section('title', 'Data Pengguna')
+@section('title', 'Data User')
 
 @section('content')
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">DATA PENGGUNA</h6>
-    </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <th>#</th>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>Aksi</th>
-                </thead>
-                <tbody>
-                    @foreach ($users as $user)
-                        <tr>
-                            <td>{{$loop->iteration}}</td>
-                            <td>{{$user->name}}</td>
-                            <td>{{$user->email}}</td>
-                            <td>#</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+<div class="main">
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+						<div class="panel-heading">
+						    <h3 class="panel-title">Data Pengguna</h3>
+                            <div class="right">
+                                <a href="#" class="btn btn-primary btn-sm">Tambah</a>  
+                            </div>
+						</div>
+						<div class="panel-body">
+							<table class="table table-hover" id="myTable">
+								<thead>
+									<tr>
+                                        <th>NO</th>
+                                        <th>ROLE</th>
+                                        <th>NAMA</th>
+                                        <th>EMAIL</th>
+                                        <th>AKSI</th>
+									</tr>
+								</thead>
+								<tbody>
+                                @foreach($users as $user)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{$user->role}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->email}}</td>
+                                        <td>
+                                            
+                                        </td>
+                                    </tr>
+                                @endforeach
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 @endsection
