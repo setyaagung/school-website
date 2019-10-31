@@ -12,7 +12,7 @@
 						<div class="panel-heading">
 						    <h3 class="panel-title">Data Pengguna</h3>
                             <div class="right">
-                                <a href="#" class="btn btn-primary btn-sm">Tambah</a>  
+                                <a href="{{route('user.create')}}" class="btn btn-primary btn-sm">Tambah</a>  
                             </div>
 						</div>
 						<div class="panel-body">
