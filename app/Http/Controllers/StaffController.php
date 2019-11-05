@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Berita;
+use App\Staff;
 use Illuminate\Http\Request;
 
-class BeritaController extends Controller
+class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $berita = Berita::all();
-        return view('backend/berita/index', compact('berita'));
+        $staff = Staff::all();
+        return view('backend/staff/index', compact('staff'));
     }
 
     /**
@@ -25,7 +25,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        return view('backend/berita/tambah_berita');
+        return view('backend.staff.tambah_staff');
     }
 
     /**
@@ -36,13 +36,8 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        $berita = Berita::create([
-            'judul' => $request->judul,
-            'isi' => $request->isi,
-            'user_id' => auth()->user()->id,
-            'gambar' => $request->gambar,
-        ]);
-        return redirect()->route('berita.index')->with('create', 'Data berita dan pengumuman baru berhasil ditambahkan');
+        $staff = Staff::create($request->all());
+        return redirect()->route('staff.index')->with('create', 'Data staff baru berhasil ditambahkan');
     }
 
     /**

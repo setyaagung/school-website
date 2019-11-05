@@ -17,6 +17,7 @@ Route::get('/logout', 'AuthController@logout');
 
 Route::group(['middleware' => ['auth', 'checkRole:Administrator']], function () {
     Route::get('/admin/dashboard', 'DashboardController@index');
+    Route::resource('/admin/staff', 'StaffController');
     Route::resource('/admin/user', 'UserController');
     Route::resource('/admin/berita', 'BeritaController');
 });

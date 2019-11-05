@@ -20,7 +20,7 @@
 									<div class="metric">
 										<span class="icon"><i class="fa fa-user"></i></span>
 										<p>
-                      <span class="number">{{ \DB::table('users')->count()}}</span>
+                      						<span class="number">{{ \DB::table('users')->count()}}</span>
 											<span class="title">User</span>
 										</p>
 									</div>
@@ -29,7 +29,7 @@
 									<div class="metric">
 										<span class="icon"><i class="fa fa-newspaper-o"></i></span>
 										<p>
-                      <span class="number">{{ \DB::table('berita')->count()}}</span>
+                      						<span class="number">{{ \DB::table('berita')->count()}}</span>
 											<span class="title">Berita</span>
 										</p>
 									</div>
