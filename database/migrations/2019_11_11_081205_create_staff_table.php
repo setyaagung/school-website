@@ -16,7 +16,7 @@ class CreateStaffTable extends Migration
         Schema::create('staff', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama');
-            $table->enum('status', ['Tenaga Pendidik', 'Karyawan']);
+            $table->enum('status', ['Guru', 'Karyawan']);
             $table->text('deskripsi');
             $table->string('foto');
             $table->timestamps();

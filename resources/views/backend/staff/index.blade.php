@@ -10,7 +10,7 @@
                 <div class="col-md-12">
                     <div class="panel">
 						<div class="panel-heading">
-						    <h3 class="panel-title">Data Tenaga Pendidik & Karyawan</h3>
+						    <h3 class="panel-title">Data Tenaga Guru & Karyawan</h3>
                             <div class="right">
                                 <a href="{{route('staff.create')}}" class="btn btn-primary btn-sm">Tambah</a>  
                             </div>
@@ -20,7 +20,6 @@
 								<thead>
 									<tr>
                                         <th>NO</th>
-                                        <th>FOTO</th>
                                         <th>NAMA</th>
                                         <th>STATUS</th>
                                         <th>DESKRIPSI</th>
@@ -31,12 +30,16 @@
                                 @foreach($staff as $staff)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{$staff->foto}}</td>
                                         <td>{{$staff->nama}}</td>
                                         <td>{{$staff->status}}</td>
                                         <td>{{$staff->deskripsi}}</td>
                                         <td>
-                                            
+                                            <form action="{{ route('staff.destroy', $staff->id)}}" method="POST">
+                                                <a href="https://www.youtube.com/watch?v=wOK0h9ausO4" class="btn btn-sm btn-warning">Edit</a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

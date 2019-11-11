@@ -8,4 +8,13 @@ class Staff extends Model
 {
     protected $table = 'staff';
     protected $fillable = ['nama', 'status', 'deskripsi', 'foto'];
+
+    public function foto()
+    {
+        if ($this->foto) {
+            return $this->foto;
+        } else {
+            return asset('images/no-thumbnail.jpg');
+        }
+    }
 }

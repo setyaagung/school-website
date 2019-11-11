@@ -38,7 +38,7 @@
 									<div class="metric">
 										<span class="icon"><i class="fa fa-users"></i></span>
 										<p>
-											<span class="number">0</span>
+											<span class="number">{{ \DB::table('staff')->count()}}</span>
 											<span class="title">Guru & Karyawan</span>
 										</p>
 									</div>

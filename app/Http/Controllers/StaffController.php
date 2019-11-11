@@ -25,7 +25,7 @@ class StaffController extends Controller
      */
     public function create()
     {
-        return view('backend.staff.tambah_staff');
+        return view('backend/staff/tambah_staff');
     }
 
     /**
@@ -36,6 +36,12 @@ class StaffController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama' => 'required',
+            'status' => 'required',
+            'deskripsi' => 'required'
+        ]);
+
         $staff = Staff::create($request->all());
         return redirect()->route('staff.index')->with('create', 'Data staff baru berhasil ditambahkan');
     }
@@ -82,6 +88,8 @@ class StaffController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $staff = Staff::find($id);
+        $staff->delete();
+        return redirect()->back()->with('delete', 'Data staff berhasil dihapus');
     }
 }
