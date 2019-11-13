@@ -63,9 +63,9 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Staff $staff)
     {
-        //
+        return view('backend/staff/edit_staff', compact('staff'));
     }
 
     /**
@@ -75,9 +75,15 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Staff $staff)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'status' => 'required',
+            'deskripsi' => 'required'
+        ]);
+        $staff->update($request->all());
+        return redirect()->route('staff.index')->with('update', 'Data staff berhasil diperbarui');
     }
 
     /**

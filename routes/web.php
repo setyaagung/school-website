@@ -15,7 +15,7 @@ Route::get('/admin', 'AuthController@admin')->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout', 'AuthController@logout');
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'checkRole:Administrator']], function () {
+Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'checkRole:Administrator']], function () {
     Route::get('dashboard', 'DashboardController@index');
     Route::resource('staff', 'StaffController');
     Route::resource('user', 'UserController');

@@ -35,7 +35,7 @@
                                         <td>{{$staff->deskripsi}}</td>
                                         <td>
                                             <form action="{{ route('staff.destroy', $staff->id)}}" method="POST">
-                                                <a href="https://www.youtube.com/watch?v=wOK0h9ausO4" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="{{route('staff.edit', $staff->id)}}" class="btn btn-sm btn-warning">Edit</a>
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</button>
