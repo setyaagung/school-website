@@ -29,8 +29,8 @@
 									<div class="metric">
 										<span class="icon"><i class="fa fa-newspaper-o"></i></span>
 										<p>
-                      						<span class="number">{{ \DB::table('berita')->count()}}</span>
-											<span class="title">Berita</span>
+                      						<span class="number">{{ \DB::table('informasi')->count()}}</span>
+											<span class="title">Informasi</span>
 										</p>
 									</div>
 								</div>

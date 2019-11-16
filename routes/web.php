@@ -18,6 +18,6 @@ Route::get('/logout', 'AuthController@logout');
 Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'checkRole:Administrator']], function () {
     Route::get('dashboard', 'DashboardController@index');
     Route::resource('staff', 'StaffController');
+    Route::resource('informasi', 'InformasiController');
     Route::resource('user', 'UserController');
-    Route::resource('berita', 'BeritaController');
 });

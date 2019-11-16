@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="{{asset('assets/img/favicon.png')}}">
   <style type="text/css">
 		.ck-editor__editable_inline {
-		    min-height: 250px;
+		    min-height: 180px;
 		}
 	</style>
 

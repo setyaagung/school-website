@@ -36,7 +36,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'role' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required'
+        ]);
+        $user = new \App\User;
+        $user->name = $request->name;
+        $user->role = $request->role;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->remember_token = str_random(60);
+        $user->save();
+        return redirect()->route('user.index')->with('create', 'Data user baru berhasil ditambahkan');
     }
 
     /**
@@ -81,6 +94,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $users = User::find($id);
+        $users->delete();
+        return redirect()->back()->with('delete', 'Data user berhasil dihapus');
     }
 }

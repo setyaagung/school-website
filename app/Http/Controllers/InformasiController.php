@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Berita;
+use App\Informasi;
 use Illuminate\Http\Request;
 
-class BeritaController extends Controller
+class InformasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $berita = Berita::all();
-        return view('backend/berita/index', compact('berita'));
+        $informasi = Informasi::all();
+        return view('backend/informasi/index', compact('informasi'));
     }
 
     /**
@@ -25,7 +25,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        return view('backend/berita/tambah_berita');
+        return view('backend/informasi/tambah_informasi');
     }
 
     /**
@@ -36,13 +36,22 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        $berita = Berita::create([
+        $request->validate([
+            'judul' => 'required',
+            'kategori' => 'required',
+            'isi' => 'required',
+            'gambar' => 'required'
+        ]);
+
+        $informasi = Informasi::create([
             'judul' => $request->judul,
+            'kategori' => $request->kategori,
             'isi' => $request->isi,
             'user_id' => auth()->user()->id,
             'gambar' => $request->gambar,
+
         ]);
-        return redirect()->route('berita.index')->with('create', 'Data berita dan pengumuman baru berhasil ditambahkan');
+        return redirect()->route('informasi.index')->with('create', 'Data informasi baru berhasil ditambahkan');
     }
 
     /**
@@ -62,9 +71,9 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Informasi $informasi)
     {
-        //
+        return view('backend/informasi/edit_informasi', compact('informasi'));
     }
 
     /**
@@ -74,9 +83,16 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Informasi $informasi)
     {
-        //
+        $request->validate([
+            'judul' => 'required',
+            'kategori' => 'required',
+            'isi' => 'required',
+            'gambar' => 'required'
+        ]);
+        $informasi->update($request->all());
+        return redirect()->route('informasi.index')->with('update', 'Data informasi berhasil diperbarui');
     }
 
     /**
@@ -87,6 +103,8 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $informasi = Informasi::find($id);
+        $informasi->delete();
+        return redirect()->back()->with('delete', 'Data informasi berhasil dihapus');
     }
 }

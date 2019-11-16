@@ -34,7 +34,12 @@
                                         <td>{{$user->name}}</td>
                                         <td>{{$user->email}}</td>
                                         <td>
-                                            
+                                            <form action="{{ route('user.destroy', $user->id)}}" method="POST">
+                                            <a href="{{route('user.edit', $user->id)}}" class="btn btn-sm btn-warning">Edit</a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
