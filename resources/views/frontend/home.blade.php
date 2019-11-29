@@ -19,73 +19,116 @@
     <title>MA HIDAYATUS SYUBBAN</title>
 </head>
 <body>
-    <nav data-scroll-header class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="/">HidSyubb</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="#">Home</a>
-                    <a class="nav-item nav-link" href="#">Profil Sekolah</a>
-                    <a class="nav-item nav-link" href="#staff">Guru & Karyawan</a>
-                    <a class="nav-item nav-link" href="#ekstrakurikuler">Ekstrakurikuler</a>
-                    <a class="nav-item nav-link" href="#informasi">Informasi</a>
-                    <a class="nav-item nav-link" href="#kontak">Kontak</a>
-                    <a class="nav-item nav-link" href="#">Pendaftaran</a>
-                    <a class="nav-item nav-link" href="#">Login</a>
+    <header data-scroll-header class="fixed-top">
+        <div class="upper-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <i class="fa fa-phone"></i> 024-09774888
+                        <i class="fa fa-envelope-o" style="margin-left:20px"></i> ma_hidsyubb@gmail.com
+                    </div>
+                    <div class="col-sm text-right">
+                        <a href="#kontak"><span class="fa fa-facebook-square"></span></a>
+                        <a href="#kontak"><span class="fa fa-twitter-square"></span></a>
+                        <a href="#kontak"><span class="fa fa-instagram"></span></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <img src="{{asset('images/logo.png')}}" width="5%">
+                <a class="navbar-brand" href="#"><span>HidSyubb</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profil Sekolah</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#staff">Guru & Karyawan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ekstrakurikuler">Ekstrakurikuler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#informasi">Informasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pendaftaran</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- jumbotron -->
     <section class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4 animated fadeInDown delay-1s">MA HIDAYATUS SYUBBAN</h1>
+            <h1 class="display-4 animated fadeInDown delay-1s">MADRASAH ALIYAH<br>HIDAYATUS SYUBBAN</h1>
             <p class="animated fadeInDown delay-1s" style="color:white; margin:18px;">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Cari informasi disini...">
-                <div class="input-group-append">
-                    <button type="submit" class="input-group-text btn">Cari</button>
-                </div>
-            </div>
         </div>
     </section>
-    <!-- info panel -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10 info-panel">
-                <div class="row">
-                    <div class="col-lg">
-                        <img src="{{asset('images/buku.png')}}" alt="Buku" class="float-left">
-                        <h4>Kurikulum Terbaru</h4>
-                        <p>Kurikulum kami sangat menyesuaikan dengan pemerintah dan ajaran ilmu agama islam.</p>
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{asset('images/buku.png')}}" alt="Buku" class="float-left">
-                        <h4>Kurikulum Terbaru</h4>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{asset('images/buku.png')}}" alt="Buku" class="float-left">
-                        <h4>Kurikulum Terbaru</h4>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+    <!-- keunggulan -->
+    <div class="keunggulan text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <i class="fa fa-book fa-2x rounded-circle"></i>
+                    <h5>KURIKULUM TERBARU</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse.</p>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <i class="fa fa-book fa-2x rounded-circle"></i>
+                    <h5>KURIKULUM TERBARU</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse.</p>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <i class="fa fa-book fa-2x rounded-circle"></i>
+                    <h5>KURIKULUM TERBARU</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse.</p>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <i class="fa fa-book fa-2x rounded-circle"></i>
+                    <h5>KURIKULUM TERBARU</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- informasi -->
-    <section id="informasi" class="informasi" style="margin-top: -65px">
+    <!-- ekstra -->
+    <section id="ekstrakurikuler" class="ekstrakurikuler">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h3 style="margin-top: 35px">Informasi Terbaru</h3>
+                    <h3 style="margin-top: 35px">Ekstrakurikuler</h3>
                     <hr>
                 </div>
             </div>
+        </div>
+    </section>
+     <!-- informasi -->
+     <section id="informasi" class="informasi">
+        <div class="container">
             <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Informasi Terbaru</h3>
+                    <hr>
+                </div>
+            </div>
+            <div class="row justify-content-center">
                 <div class="col-md-3">
                     <img src="{{asset('images/no-thumbnail.jpg')}}" alt="Informasi" class="img-fluid">
                     <p>26 November 2019 | By Admin</p>
@@ -115,7 +158,7 @@
                     <p style="margin-top: -10px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sit laboriosam tempora soluta odio obcaecati excepturi, in cum alias fugiat.</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                     <div class="col-md-3">
                         <img src="{{asset('images/no-thumbnail.jpg')}}" alt="Informasi" class="img-fluid">
                         <p>26 November 2019 | By Admin</p>
@@ -150,16 +193,9 @@
             </div>
         </div>
     </section>
-    <!-- ekstra -->
-    <section id="ekstrakurikuler" class="ekstrakurikuler">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3 style="margin-top: 35px">Ekstrakurikuler</h3>
-                    <hr>
-                </div>
-            </div>
-        </div>
+    <!-- kata-kata -->
+    <section class="slogan">
+
     </section>
     <!-- staff -->
     <section id="staff" class="staff">
@@ -171,17 +207,26 @@
                 </div>
             </div>
             <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="card">
-                            <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">WALUYO, S.Pd</h5>
-                                <p class="card-text">GURU MATEMATIKA</p>
-                            </div>
+                <div class="item">
+                    <div class="card shadow">
+                        <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">SITI KHUMAIROH, S.Pd</h5>
+                            <p class="card-text">GURU PENDIDIKAN PANCASILA</p>
                         </div>
                     </div>
+                </div>
                 <div class="item">
-                    <div class="card">
+                    <div class="card shadow">
+                        <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">EKA FITRIYANA, S.Pd</h5>
+                            <p class="card-text">WAKA KESISWAAN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card shadow">
                         <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title text-center">WALUYO, S.Pd</h5>
@@ -190,7 +235,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card">
+                    <div class="card shadow">
                         <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title text-center">WALUYO, S.Pd</h5>
@@ -199,7 +244,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card">
+                    <div class="card shadow">
                         <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title text-center">WALUYO, S.Pd</h5>
@@ -208,7 +253,25 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card">
+                    <div class="card shadow">
+                        <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">WALUYO, S.Pd</h5>
+                            <p class="card-text">GURU MATEMATIKA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card shadow">
+                        <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">WALUYO, S.Pd</h5>
+                            <p class="card-text">GURU MATEMATIKA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card shadow">
                         <img src="{{asset('images/guru.png')}}" alt="Staff" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title text-center">WALUYO, S.Pd</h5>
@@ -217,14 +280,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 text-center" style="margin-bottom:35px;margin-top: 20px;">
-                <a href="#" class="btn btn-md btn-outline-dark">LIHAT SEMUA GURU & KARYAWAN</a>
+            <div class="col-md-12 text-center">
+                <a href="#" class="btn btn-md btn-outline-dark" style="margin-bottom:35px;margin-top: 20px;">LIHAT SEMUA GURU & KARYAWAN</a>
             </div>
         </div>
     </section>
-    <section class="new">
+    <!-- kontak -->
+    <section id="kontak" class="kontak">
         <div class="container">
-
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 style="margin-top: 35px">Hubungi Kami</h3>
+                    <hr>
+                </div>
+            </div>
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -236,7 +305,7 @@
        $('.owl-carousel').owlCarousel({
             autoplay:true,
             autoplayHoverPause:true,
-            margin: 10,
+            margin: 30,
             loop:true,
             nav:true,
             dots:true,
@@ -261,10 +330,12 @@
             var startY = $('.navbar').height() * 1; //The point where the navbar changes in px
                 
             if($(window).scrollTop() > startY){
+                $('.upper-bar').addClass("scrolled");
                 $('.navbar').addClass("scrolled");
                 $('.navbar-brand').addClass("scrolled");
                 $('.nav-link').addClass("scrolled");
             }else{
+                $('.upper-bar').removeClass("scrolled");
                 $('.navbar').removeClass("scrolled");
                 $('.navbar-brand').removeClass("scrolled");
                 $('.nav-link').removeClass("scrolled");
