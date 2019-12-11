@@ -47,15 +47,18 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label><b>Foto</b></label>
-                                    <div class="input-group">
+                                    <div class="input-group @error('foto') has-error @enderror">
                                         <span class="input-group-btn">
                                             <a id="lfm" data-input="foto" data-preview="holder" class="btn btn-primary">
                                                 <i class="fa fa-picture-o"></i> Choose
                                             </a>
                                         </span>
-                                        <input id="foto" class="form-control" type="text" name="foto">
+                                        <input id="foto" class="form-control" type="text" name="foto" value="{{ $staff->foto }}">
                                     </div>
-                                    <img id="holder" style="margin-top:15px;margin-bottom:15px;max-height:100px;">
+                                    @error('foto')
+                                        <span class="help-block">{{ $message }}</span>
+                                    @enderror
+                                    <img id="holder" name="foto" src="{{ $staff->foto }}" style="margin-top:15px;margin-bottom:15px;max-height:100px;">
                                     <div class="input-group">
                                         <input type="submit" class="btn btn-primary" value="Submit">
                                     </div>

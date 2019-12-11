@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Staff;
+use App\Kontak;
 use Illuminate\Http\Request;
 
-class StaffController extends Controller
+class KontakController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class StaffController extends Controller
      */
     public function index()
     {
-        $staff = Staff::all();
-        return view('backend/staff/index', compact('staff'));
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class StaffController extends Controller
      */
     public function create()
     {
-        return view('backend/staff/tambah_staff');
+        //
     }
 
     /**
@@ -36,15 +35,7 @@ class StaffController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => 'required',
-            'status' => 'required',
-            'deskripsi' => 'required',
-            'foto' => 'required'
-        ]);
-
-        $staff = Staff::create($request->all());
-        return redirect()->route('staff.index')->with('create', 'Data staff baru berhasil ditambahkan');
+        //
     }
 
     /**
@@ -64,9 +55,9 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Staff $staff)
+    public function edit(Kontak $kontak)
     {
-        return view('backend/staff/edit_staff', compact('staff'));
+        return view('backend/kontak/index', compact('kontak'));
     }
 
     /**
@@ -76,16 +67,17 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Staff $staff)
+    public function update(Request $request, Kontak $kontak)
     {
         $request->validate([
-            'nama' => 'required',
-            'status' => 'required',
-            'deskripsi' => 'required',
-            'foto' => 'required'
+            'nama_sekolah' => 'required',
+            'alamat' => 'required',
+            'email' => 'required|email',
+            'telepon' => 'required|max:15|regex:/(0)[0-9]{9}/',
+            'fax' => 'required|max:15|regex:/(0)[0-9]{9}/'
         ]);
-        $staff->update($request->all());
-        return redirect()->route('staff.index')->with('update', 'Data staff berhasil diperbarui');
+        $kontak->update($request->all());
+        return redirect()->back()->with('update', 'Data kontak sekolah berhasil diperbarui');
     }
 
     /**
@@ -96,8 +88,6 @@ class StaffController extends Controller
      */
     public function destroy($id)
     {
-        $staff = Staff::find($id);
-        $staff->delete();
-        return redirect()->back()->with('delete', 'Data staff berhasil dihapus');
+        //
     }
 }
