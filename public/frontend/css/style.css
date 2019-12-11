@@ -337,18 +337,21 @@ h5 {
 }
 
 .kontak i {
-    background-color: white;
-    color: black;
+    font-size: 24px !important;
+    width: 40px;
+    text-align: center;
+    background: white;
+    color: #04091e;
     padding: 5px;
-    margin-bottom: 10px;
-    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-right: 15px;
 }
 
 .kontak p {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 20px;
-    text-align: justify;
+    text-align: justify !important;
 }
 
 .col-md-7 a {

@@ -152,23 +152,27 @@
                 <div class="col-md-5">
                     <h5>KONTAK</h5>
                     <div class="col-md">
-                        <i class="fa fa-envelope-o fa-2x rounded-circle float-left"></i>
-                        <p> Email<br>ma_hidsyubb@gmail.com</p>
+                        <i class="fa fa-envelope float-left"></i>
+                        <p>Email<br>ma_hidsyubb@gmail.com</p>
                     </div>
                     <div class="col-md">
-                        <i class="fa fa-map-o fa-2x rounded-circle float-left"></i>
-                        <p> Alamat<br>Jl. Kyai H. Zainuddin Raya No.1, Karangroto, Kec. Genuk, Kota Semarang, Jawa Tengah 50117</p>
+                        <i class="fa fa-map float-left"></i>
+                        <p>Alamat<br>Jl. Kyai H. Zainuddin Raya No.1, Karangroto, Kec. Genuk, Kota Semarang, Jawa Tengah 50117</p>
                     </div>
                     <div class="col-md">
-                        <i class="fa fa-phone-square fa-2x rounded-circle float-left"></i>
-                        <p>&nbsp; Phone<br>&nbsp; 024-09774888</p>
+                        <i class="fa fa-phone float-left"></i>
+                        <p>Phone<br>024-09774888</p>
                     </div>
-                    <br>
                     <div class="col-md">
-                        <a href="#kontak"><i class="fa fa-facebook-square fa-2x rounded-circle"></i></a>
-                        <a href="#kontak"><i class="fa fa-twitter-square fa-2x rounded-circle"></i></a>
-                        <a href="#kontak"><i class="fa fa-instagram fa-2x rounded-circle"></i></a>
-                        <a href="#kontak"><i class="fa fa-youtube-play fa-2x rounded-circle"></i></a>
+                        <i class="fa fa-fax float-left"></i>
+                        <p>Fax<br>024-09774888</p>
+                    </div>
+                    <p style="margin-left:20px">Sosial Media</p>
+                    <div class="col-md">
+                        <a href="#kontak"><i class="fa fa-facebook"></i></a>
+                        <a href="#kontak"><i class="fa fa-twitter"></i></a>
+                        <a href="#kontak"><i class="fa fa-instagram"></i></a>
+                        <a href="#kontak"><i class="fa fa-youtube-play"></i></a>
                     </div>
                 </div>
             </div>

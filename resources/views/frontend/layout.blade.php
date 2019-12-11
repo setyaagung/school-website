@@ -83,7 +83,7 @@
     @yield('content')
     <footer class="page-footer">
        <div class="container">
-            <div class="footer-copyright py-4">&copy; 2019 Copyright 
+            <div class="footer-copyright text-center py-4">&copy; 2019 Copyright 
                 <a href="#"> Madrasah Aliyah Hidayatus Syubban</a>
             </div>
        </div>
