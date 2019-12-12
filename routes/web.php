@@ -12,7 +12,10 @@
 */
 //Login
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'SiteController@home');
+Route::get('/login', 'SiteController@login');
+Route::post('/postLogin', 'SiteController@postLogin');
+
 //profil
 Route::get('/profil-sekolah/katasambutan', 'ProfilSekolahController@kata_sambutan');
 Route::get('/profil-sekolah/sejarah', 'ProfilSekolahController@sejarah');

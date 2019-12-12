@@ -47,11 +47,11 @@
                 <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
+                            <a class="nav-link {{ (request()->segment(1) == '') ? 'active' : ''}}" href="/">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Profil Sekolah
+                                Tentang Sekolah
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/profil-sekolah/katasambutan">Kata Sambutan</a>
@@ -61,19 +61,20 @@
                                 <a class="dropdown-item" href="/profil-sekolah/visi-misi">Visi & Misi</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Struktur Organisasi</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#staff">Guru & Karyawan</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#ekstrakurikuler">Ekstrakurikuler</a>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#staff">Guru & Karyawan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#ekstrakurikuler">Ekstrakurikuler</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#informasi">Informasi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#kontak">Kontak</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ (request()->segment(1) == 'login') ? 'active' : ''}}" href="/login">Log in</a>
                         </li>
                     </ul>
                 </div>

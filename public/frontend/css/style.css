@@ -46,7 +46,7 @@ body {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .nav-link:hover {
@@ -69,9 +69,22 @@ body {
     background-color: white;
 }
 
-p {
+p,
+label,
+input,
+button {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
+    font-size: 14px !important;
+}
+
+label {
+    color: #04091e;
+}
+
+button {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
 }
 
 .main_btn {
@@ -97,31 +110,6 @@ p {
 .main_btn:hover {
     background: transparent;
     color: #4dbf1c;
-}
-
-.main_btn1 {
-    text-align: center;
-    display: inline-block;
-    background: transparent;
-    padding: 0 40px;
-    color: #4dbf1c;
-    font-family: "Roboto", sans-serif;
-    border-radius: 0;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 48px;
-    outline: none !important;
-    box-shadow: none !important;
-    text-align: center;
-    border: 1px solid #4dbf1c;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 300ms linear 0s;
-}
-
-.main_btn1:hover {
-    background: #4dbf1c;
-    color: #fff;
 }
 
 .jumbotron a {
@@ -400,6 +388,7 @@ footer a {
 
 footer a:hover {
     text-decoration: none;
+    color: #4dbf1c;
 }
 
 .jumbotron.sambutan {
@@ -424,7 +413,8 @@ a {
     text-decoration: none;
 }
 
-.sambutan a:hover {
+.sambutan,
+.login a:hover {
     color: #4dbf1c;
 }
 
@@ -445,6 +435,100 @@ a {
 
 .kata-sambutan p {
     text-align: justify;
+}
+
+.jumbotron.login {
+    min-height: 300px;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)),
+        url(/images/2.jpg);
+}
+
+.login h3 {
+    margin-top: 90px;
+}
+
+.log {
+    background-color: white;
+    margin-top: -30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: -900px;
+}
+
+input::placeholder {
+    font-size: 14px;
+}
+
+.main_btnLogin {
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    background: #04091e;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    border: 1px solid #04091e;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 300ms linear 0s;
+}
+
+.main_btnLogin:hover {
+    background: transparent;
+    color: #04091e;
+}
+
+.main_btnDaftar {
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    background: #4dbf1c;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    border: 1px solid #4dbf1c;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 300ms linear 0s;
+}
+
+.main_btnDaftar:hover {
+    background: transparent;
+    color: #4dbf1c;
+}
+
+.forgot-password {
+    color: #04091e !important;
+    float: right;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin-top: 15px;
+    text-decoration: none !important;
+}
+
+.forgot-password:hover {
+    color: #4dbf1c !important;
+}
+
+.forgot-password i {
+    margin-right: 8px;
 }
 
 ol {

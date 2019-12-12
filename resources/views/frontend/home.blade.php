@@ -9,8 +9,7 @@
             <h3 class="animated fadeInDown delay-1s">MADRASAH ALIYAH<br>HIDAYATUS SYUBBAN</h3>
             <p class="animated fadeInDown delay-1s">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi rem perspiciatis quis facere asperiores voluptatum autem nihil saepe amet atque?</p></p>
             <div class="text-center">
-                <a href="#" class="main_btn">Pendaftaran</a>
-                <a href="#" class="main_btn1">Sign Up</a>
+                <a href="#" class="main_btn">Pendaftaran Siswa Baru</a>
             </div>
         </div>
     </section>
