@@ -37,13 +37,15 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'fullname' => 'required',
+            'nickname' => 'required',
             'role' => 'required',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required'
         ]);
         $user = new \App\User;
-        $user->name = $request->name;
+        $user->fullname = $request->fullname;
+        $user->nickname = $request->nickname;
         $user->role = $request->role;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
@@ -69,9 +71,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('backend/user/edit_user', compact('user'));
     }
 
     /**
@@ -81,9 +83,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+            'fullname' => 'required',
+            'nickname' => 'required',
+            'role' => 'required',
+            'email' => 'required|email|unique:users,email,' . $user->id . ',id',
+        ]);
+        $user->update($request->all());
+        return redirect()->route('user.index')->with('update', 'Data user berhasil diperbarui');
     }
 
     /**

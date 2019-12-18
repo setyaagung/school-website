@@ -18,8 +18,8 @@
                     <form action="/postlogin" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="exampleInputEmail1">Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Email" value="{{old('email')}}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>

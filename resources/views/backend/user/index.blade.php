@@ -21,7 +21,8 @@
 									<tr>
                                         <th>NO</th>
                                         <th>ROLE</th>
-                                        <th>NAMA</th>
+                                        <th>NAMA LENGKAP</th>
+                                        <th>NAMA PANGGILAN</th>
                                         <th>EMAIL</th>
                                         <th>AKSI</th>
 									</tr>
@@ -31,7 +32,8 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{$user->role}}</td>
-                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->fullname}}</td>
+                                        <td>{{$user->nickname}}</td>
                                         <td>{{$user->email}}</td>
                                         <td>
                                             <form action="{{ route('user.destroy', $user->id)}}" method="POST">

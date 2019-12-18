@@ -34,7 +34,7 @@
 								<div class="logo text-center"><img src="{{asset('backend/assets/img/logo-dark.png')}}" alt="Klorofil Logo"></div>
 								<p class="lead">Login to your account</p>
 							</div>
-              				<form class="form-auth-small" action="/postlogin" method="POST">
+              				<form class="form-auth-small" action="/admin/postlogin" method="POST">
               				  	{{ csrf_field() }}
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Email</label>

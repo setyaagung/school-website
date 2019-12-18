@@ -50,32 +50,48 @@
                             <a class="nav-link {{ (request()->segment(1) == '') ? 'active' : ''}}" href="/">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle {{ (request()->segment(1) == 'profil-sekolah') ? 'active' : ''}}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Tentang Sekolah
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/profil-sekolah/katasambutan">Kata Sambutan</a>
+                            <div class="dropdown-menu animated fadeIn faster" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item {{ (request()->segment(2) == 'katasambutan') ? 'active' : ''}}" href="/profil-sekolah/katasambutan">Kata Sambutan</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/profil-sekolah/sejarah">Sejarah</a>
+                                <a class="dropdown-item {{ (request()->segment(2) == 'sejarah') ? 'active' : ''}}" href="/profil-sekolah/sejarah">Sejarah</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/profil-sekolah/visi-misi">Visi & Misi</a>
+                                <a class="dropdown-item {{ (request()->segment(2) == 'visi-misi') ? 'active' : ''}}" href="/profil-sekolah/visi-misi">Visi & Misi</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Struktur Organisasi</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#staff">Guru & Karyawan</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#ekstrakurikuler">Ekstrakurikuler</a>
+                                <a class="dropdown-item" href="/#staff">Guru & Karyawan</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#informasi">Informasi</a>
+                            <a class="nav-link" href="/#ekstrakurikuler">Ekstrakurikuler</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#kontak">Kontak</a>
+                            <a class="nav-link {{ (request()->segment(1) == 'informasi') ? 'active' : ''}}" href="/#informasi">Informasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ (request()->segment(1) == 'login') ? 'active' : ''}}" href="/login">Log in</a>
+                            <a class="nav-link" href="/#kontak">Kontak</a>
                         </li>
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link {{ (request()->segment(1) == 'login') ? 'active' : ''}}" href="/login">Log in</a>
+                            </li>
+                        @else                           
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user"></i>{{Auth::user()->nickname}}
+                                </a>
+                                <div class="dropdown-menu animated fadeIn faster" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Profil Anda</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fa fa-key"></i>Ganti Password</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out"></i> Log out</a>
+                                </div>
+                            </li>
+                        @endguest
                     </ul>
                 </div>
             </div>
@@ -85,7 +101,7 @@
     <footer class="page-footer">
        <div class="container">
             <div class="footer-copyright text-center py-4">&copy; 2019 Copyright 
-                <a href="#"> Madrasah Aliyah Hidayatus Syubban</a>
+                <a href="/"> Madrasah Aliyah Hidayatus Syubban</a>
             </div>
        </div>
     </footer>

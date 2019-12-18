@@ -1,5 +1,7 @@
 @extends('frontend.layout')
 
+@section('title', 'Informasi')
+
 @section('content')
     <section class="jumbotron sambutan">
         <div class="container">
@@ -14,6 +16,19 @@
                 <b>{{$informasi->created_at->format('d M Y')}} | By {{$informasi->user->name}}</b>
                 <p class="text-justify">{!!$informasi->isi!!}</p>
             </div>
+            <hr class="hr">
+            <section style="min-height:100px">
+                <div style="color:black !important;" class="nextprevious">
+                    @if (isset($previous))
+                    <a href="{{$previous->slug}}"><img src="{{$previous->gambar}}" class="img-fluid float-left"></a>
+                    <p class="previous">Previous</p>
+                    @endif
+                    @if (isset($next))
+                        <a href="{{$next->slug}}"><img src="{{$next->gambar}}" class="img-fluid float-right"></a>
+                        <p class="next">Next</p>
+                    @endif
+                </div>
+            </section>
         </div>
     </section>
 @endsection
