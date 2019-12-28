@@ -4,7 +4,7 @@
     
 @section('content')
     <!-- jumbotron -->
-    <section class="jumbotron jumbotron-fluid">
+    <section class="jumbotron jumbotron-fluid a">
         <div class="container">
             <h3 class="animated fadeInDown delay-1s">MADRASAH ALIYAH<br>HIDAYATUS SYUBBAN</h3>
             <p class="animated fadeInDown delay-1s">Penyejuk Hati Penguat Iman, Iman dan Taqwa Kuat, Ilmu Pengetahuan dan Teknologi Mantap IMTAQ KUAT IPTEK MANTAP</p>

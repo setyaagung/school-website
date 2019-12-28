@@ -38,11 +38,11 @@
               				  	{{ csrf_field() }}
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Email</label>
-									<input type="email" name="email" class="form-control" id="signin-email" placeholder="Email">
+									<input type="email" name="email" class="form-control" id="signin-email" placeholder="Email" required>
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Password</label>
-									<input type="password" name="password" class="form-control" id="signin-password" placeholder="Password">
+									<input type="password" name="password" class="form-control" id="signin-password" placeholder="Password" required>
 								</div>
 								<div class="form-group clearfix">
 									<label class="fancy-checkbox element-left">
@@ -59,10 +59,6 @@
 					</div>
 					<div class="right">
 						<div class="overlay"></div>
-						<div class="content text">
-							<h1 class="heading">MA Hidayatus Syubban Semarang</h1>
-							<p>by The Develovers</p>
-						</div>
 					</div>
 					<div class="clearfix"></div>
 				</div>

@@ -33,6 +33,10 @@ Route::get('/informasi/{slug}', [
 ]);
 //pendaftaran online
 Route::get('/pendaftaran', 'SitePendaftaranController@index');
+Route::get('/prosedur_pendaftaran', 'SitePendaftaranController@prosedur');
+Route::get('/formulir_pendaftaran', 'SitePendaftaranController@formulir');
+Route::get('/list_pendaftar', 'SitePendaftaranController@list_pendaftar');
+Route::get('/cari_formulir', 'SitePendaftaranController@cari_formulir');
 
 //backend
 Route::get('/admin', 'AuthController@admin')->name('login');
@@ -44,5 +48,7 @@ Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'checkRole:A
     Route::resource('kontak', 'KontakController')->only(['edit', 'update']);
     Route::resource('staff', 'StaffController');
     Route::resource('informasi', 'InformasiController');
+    Route::resource('pendaftaran', 'PendaftaranController');
+    Route::get('/{id}/ubahstatus', 'PendaftaranController@ubahstatus')->name('ubahstatus');
     Route::resource('user', 'UserController');
 });

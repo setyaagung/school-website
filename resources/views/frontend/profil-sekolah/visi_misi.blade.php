@@ -10,23 +10,28 @@
     <section class="kata-sambutan">
         <div class="container">
             <div class="row">
-                <h4>VISI</h4>
-                <p class="text-justify">Terwujudnya sekolah yang mampu menghasilkan keluaran yang berakar budaya bangsa, berwawasan kebangsaan dan lingkungan hidup serta bercakrawala global</p>
-                <h4>MISI</h4>
-                <ol>
-                    <li>
-                        <p class="text-justify">Mengembangkan kemampuan akademik berstandar internasional dengan menerapkan dan mengembangkan kurikulum lokal, nasional, maupun internasional,</p>
-                    </li>
-                    <li>
-                        <p class="text-justify">Mengembangkan kedisiplinan, kepemimpinan serta ketakwaan melalui berbagai kegiatan kesiswaan baik dalam organisasi siswa intrasekolah ,   ekstrakurikuler, kegiatan keagamaan, maupun kegiatan lain yang berakar budaya bangsa,</p>
-                    </li>
-                    <li>
-                        <p class="text-justify">Mengembangkan sikap berkompetisi yang positif melalui berbagai bidang dan kesempatan dengan mengedepankan semangat kebangsaan</p>
-                    </li>
-                    <li>
-                        <p class="text-justify">Menanamkan nilai keteladanan dan budi pekerti luhur melalui pengembangan kultur sekolah yang sesuai dengan norma keagamaan, sosial kemasyarakatan, kebangsaan serta berwawasan lingkungan.</p>
-                    </li>
-                </ol>
+                <div class="col-md-1">
+                    <h4>VISI</h4>
+                </div>
+                <div class="col-md-12">
+                    <p>Iman dan Taqwa Kuat, Ilmu Pengetahuan dan Teknologi Mantap (IMTAQ KUAT, IPTEK MANTAP).</p>
+                </div>
+                <div class="col-md-1">
+                    <h4>MISI</h4>
+                </div>
+                <div class="col-md-12">
+                    <ol>
+                        <li>
+                            <p class="text-justify">Memantapkan aqidah islam yang berhaluan ahlus sunah wal jamaah.</p>
+                        </li>
+                        <li>
+                            <p class="text-justify">Kreatif dan inovatif terhadap pemanfaatan iptek bagi agama, bangsa dan negara.</p>
+                        </li>
+                        <li>
+                            <p class="text-justify">Mewujudkan perilaku yang berakhlaqul karimah.</p>
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
     </section>

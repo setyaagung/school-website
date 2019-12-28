@@ -121,13 +121,12 @@ button {
     text-decoration: none;
 }
 
-.jumbotron {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.4)),
-        url(/images/s-bg.jpg);
+.jumbotron.a {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(/images/5.jpg) no-repeat scroll;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     min-height: 655px;
 }
 
@@ -454,7 +453,7 @@ a {
 }
 
 .kata-sambutan p {
-    text-align: justify;
+    text-align: justify !important;
 }
 
 .kata-sambutan.news {
@@ -618,6 +617,12 @@ ol {
     margin-left: -5px;
 }
 
+.prosedur ol {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin-left: -5px;
+}
+
 .d-flex.active {
     color: #4dbf1c !important;
 }
@@ -755,6 +760,22 @@ ol {
     font-family: "Roboto", sans-serif;
 }
 
+select {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px !important;
+}
+
+table {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px !important;
+}
+
+thead {
+    background: #04091e;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .upper-bar {
@@ -765,8 +786,8 @@ ol {
         text-align: right;
     }
 
-    .jumbotron {
-        min-height: 700px;
+    .jumbotron.a {
+        min-height: 665px;
     }
 
     .row.justify-content-center.e-2 {
@@ -803,7 +824,7 @@ ol {
     }
 
     .dropdown-menu {
-        margin-top: 21px;
+        margin-top: 18px;
     }
 
     .hr {
@@ -830,6 +851,11 @@ ol {
 
     .nextprevious p {
         text-align: right !important;
+    }
+
+    .form-group.row {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
     }
 
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/fav.png">
+    <link rel="shortcut icon" href="{{asset('images/logo.png')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
@@ -59,8 +59,6 @@
                                 <a class="dropdown-item {{ (request()->segment(2) == 'sejarah') ? 'active' : ''}}" href="/profil-sekolah/sejarah">Sejarah</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item {{ (request()->segment(2) == 'visi-misi') ? 'active' : ''}}" href="/profil-sekolah/visi-misi">Visi & Misi</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Struktur Organisasi</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/#staff">Guru & Karyawan</a>
                             </div>

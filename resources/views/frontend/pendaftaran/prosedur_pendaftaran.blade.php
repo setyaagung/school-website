@@ -1,6 +1,6 @@
 @extends('frontend.layout')
 
-@section('title', 'PPDB Online')
+@section('title', 'Prosedur PPDB Online')
 
 @section('content')
     <section class="jumbotron sambutan">
@@ -48,38 +48,28 @@
                 </div>
                 
                 <div class="col-lg-8">
-                    <h5 style="margin-bottom:40px">PENDAFTARAN PESERTA DIDIK BARU (PPDB) MA HIDAYATUS SYUBBAN TAHUN 2020/2021</h5>
-                    <div class="tempat">
-                        <h6>A. TEMPAT PENDAFTARAN DAN INFORMASI</h6>
-                        @foreach ($kontak as $k)
-                        <ul>
-                            <li>{{$k->alamat}}</li>
-                            <li>Telp. {{$k->telepon}}, Fax. {{$k->fax}}</li>
-                            <li>Email : {{$k->email}}</li>
-                        </ul>
-                        @endforeach
+                    <div class="prosedur">
+                        <h6>PROSEDUR PENDAFTARAN</h6>
+                        <ol>
+                            <li>Mengisi formulir pendaftaran online</li>
+                            <li>Mencetak Formulir pendaftaran yang sudah diisi</li>
+                            <li>Datang ke administrasi pendaftaran dengan membawa hasil cetak formulir pendaftaran dan membayar uang pendaftaran Rp. 50.000</li>
+                            <li>Wawancara SPI</li>
+                            <li>Daftar ulang, membayar paket dan SPI</li>
+                            <li>DITERIMA</li>
+                        </ol>
                     </div>
-                    <div class="waktu">
-                        <h6>B. WAKTU PENDAFTARAN</h6>
-                        <ul>
-                            <li>Hari : Senin - Sabtu</li>
-                            <li>Waktu : Pukul 00.07 s/d 16.00 WIB</li>
-                        </ul>
-                    </div>
-                    <div class="kuota">
-                        <h6>C. KUOTA PENERIMAAN PESERTA DIDIK</h6>
-                        <ul>
-                            <li>Rencana penerimaan 3 kelas</li>
-                            <li>Rencana jumlah siswa yang diterima 108 siswa</li>
-                            <li>Rencana masing - masing 1 kelas 36 siswa</li>
-                        </ul>
-                    </div>
-                    <div class="biaya">
-                        <h6>D. BIAYA - BIAYA</h6>
-                        <ul>
-                            <li>SPP Kelas Flat (Tidak naik sampai kelas 12)</li>
-                            <li>Formulir pendaftaran Rp. 50.000</li>
-                        </ul>
+                    <div class="prosedur">
+                        <h6>SYARAT-SYARAT PENDAFTARAN SISWA BARU</h6>
+                        <ol>
+                            <li>Mengisi formulir pendaftaran</li>
+                            <li>Pas photo ukuran 3 x 4 ( 3 lembar )</li>
+                            <li>Foto copy raport SMP/MTs ( semester 1 sd 5 )</li>
+                            <li>Foto copy SKHUN ( jika sudah ada ) yang sudah dilegalisir</li>
+                            <li>Foto copy Ijazah ( jika sudah ada ) yang sudah dilegalisir</li>
+                            <li>Foto copy Piagam penghargaan Akademik / Non Akademik( jika ada )</li>
+                            <li>Foto copy Hasil Tes Psikologi (jika ada)</li>
+                        </ol>
                     </div>
                 </div>
             </div>

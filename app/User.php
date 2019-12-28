@@ -43,6 +43,10 @@ class User extends Authenticatable
 
     public function informasi()
     {
-        return $this->hasMany(Berita::class);
+        return $this->hasMany(Informasi::class);
+    }
+    public function pendaftaran()
+    {
+        return $this->hasMany(Pendaftaran::class);
     }
 }

@@ -1,6 +1,6 @@
 @extends('frontend.layout')
 
-@section('title', 'PPDB Online')
+@section('title', 'List Pendaftar')
 
 @section('content')
     <section class="jumbotron sambutan">
@@ -48,39 +48,32 @@
                 </div>
                 
                 <div class="col-lg-8">
-                    <h5 style="margin-bottom:40px">PENDAFTARAN PESERTA DIDIK BARU (PPDB) MA HIDAYATUS SYUBBAN TAHUN 2020/2021</h5>
-                    <div class="tempat">
-                        <h6>A. TEMPAT PENDAFTARAN DAN INFORMASI</h6>
-                        @foreach ($kontak as $k)
-                        <ul>
-                            <li>{{$k->alamat}}</li>
-                            <li>Telp. {{$k->telepon}}, Fax. {{$k->fax}}</li>
-                            <li>Email : {{$k->email}}</li>
-                        </ul>
-                        @endforeach
-                    </div>
-                    <div class="waktu">
-                        <h6>B. WAKTU PENDAFTARAN</h6>
-                        <ul>
-                            <li>Hari : Senin - Sabtu</li>
-                            <li>Waktu : Pukul 00.07 s/d 16.00 WIB</li>
-                        </ul>
-                    </div>
-                    <div class="kuota">
-                        <h6>C. KUOTA PENERIMAAN PESERTA DIDIK</h6>
-                        <ul>
-                            <li>Rencana penerimaan 3 kelas</li>
-                            <li>Rencana jumlah siswa yang diterima 108 siswa</li>
-                            <li>Rencana masing - masing 1 kelas 36 siswa</li>
-                        </ul>
-                    </div>
-                    <div class="biaya">
-                        <h6>D. BIAYA - BIAYA</h6>
-                        <ul>
-                            <li>SPP Kelas Flat (Tidak naik sampai kelas 12)</li>
-                            <li>Formulir pendaftaran Rp. 50.000</li>
-                        </ul>
-                    </div>
+                    <h6>LIST DATA PENDAFTAR</h6>
+                    <hr>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <td>NO</td>
+                                <td>NAMA</td>
+                                <td>ASAL SEKOLAH</td>
+                                <td>STATUS</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MUHAMMAD AGUNG SETYA BUDI</td>
+                                <td>SMP N 34 SEMARANG</td>
+                                <td>KONFIRMASI</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>MUHAMMAD AGUNG SETYA BUDI</td>
+                                <td>SMP N 34 SEMARANG</td>
+                                <td>KONFIRMASI</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
