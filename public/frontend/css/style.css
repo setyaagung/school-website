@@ -512,6 +512,15 @@ input::placeholder {
     font-size: 14px;
 }
 
+textarea {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px !important;
+}
+
+.card-header p {
+    text-align: center !important;
+}
+
 .main_btnLogin {
     margin-top: 10px;
     text-align: center;
@@ -629,6 +638,19 @@ ol {
 
 .invalid-feedback {
     font-family: "Roboto", sans-serif;
+}
+
+.alert-primary {
+    font-family: "Roboto", sans-serif;
+    background-color: #04091e;
+}
+
+.alert-primary a {
+    color: white !important;
+}
+
+.alert-primary a:hover {
+    color: #4dbf1c !important;
 }
 
 .widget-wrap .search-widget form.search-form input[type=text] {
@@ -856,6 +878,10 @@ thead {
     .form-group.row {
         margin-left: -10px !important;
         margin-right: -10px !important;
+    }
+
+    .card-body .col-sm-12 {
+        margin-left: -40px;
     }
 
 }

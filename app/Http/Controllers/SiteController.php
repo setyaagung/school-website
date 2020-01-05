@@ -41,13 +41,15 @@ class SiteController extends Controller
     public function postregister(Request $request)
     {
         $request->validate([
-            'name' => 'required|string',
+            'fullname' => 'required|string',
+            'nickname' => 'required|string',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6',
             'confirm_password' => 'required|same:password'
         ]);
         $user = new \App\User;
-        $user->name = $request->name;
+        $user->fullname = $request->fullname;
+        $user->nickname = $request->nickname;
         $user->role = 'Siswa';
         $user->email = $request->email;
         $user->password = bcrypt($request->password);

@@ -23,8 +23,17 @@
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nama Lengkap</label>
-                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Nama Lengkap" value="{{ old('name') }}">
-                            @error('name')
+                            <input type="text" name="fullname" class="form-control @error('fullname') is-invalid @enderror" placeholder="Nama Lengkap" value="{{ old('fullname') }}">
+                            @error('fullname')
+                                <div class="invalid-feedback">
+					            	{{ $message }}
+					            </div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nama Panggilan</label>
+                            <input type="text" name="nickname" class="form-control @error('nickname') is-invalid @enderror" placeholder="Nama Panggilan" value="{{ old('nickname') }}">
+                            @error('nickname')
                                 <div class="invalid-feedback">
 					            	{{ $message }}
 					            </div>

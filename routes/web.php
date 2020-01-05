@@ -32,9 +32,11 @@ Route::get('/informasi/{slug}', [
     'as' => 'site.single.informasi',
 ]);
 //pendaftaran online
-Route::get('/pendaftaran', 'SitePendaftaranController@index');
+Route::get('/pendaftaran', 'SitePendaftaranController@index')->name('site.pendaftaran');
 Route::get('/prosedur_pendaftaran', 'SitePendaftaranController@prosedur');
-Route::get('/formulir_pendaftaran', 'SitePendaftaranController@formulir');
+Route::get('/formulir-pendaftaran', 'SitePendaftaranController@formulir');
+Route::get('/formulir-pendaftaran/{pendaftaran}/daftar', 'SitePendaftaranController@site_create_formulir')->name('site.form.create');
+Route::post('/formulir-pendaftaran/{pendaftaran}/store', 'SitePendaftaranController@site_store_formulir')->name('site.form.store')->middleware('web');
 Route::get('/list_pendaftar', 'SitePendaftaranController@list_pendaftar');
 Route::get('/cari_formulir', 'SitePendaftaranController@cari_formulir');
 
@@ -49,6 +51,13 @@ Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'checkRole:A
     Route::resource('staff', 'StaffController');
     Route::resource('informasi', 'InformasiController');
     Route::resource('pendaftaran', 'PendaftaranController');
-    Route::get('/{id}/ubahstatus', 'PendaftaranController@ubahstatus')->name('ubahstatus');
+    Route::get('/{pendaftaran}/ubahstatus', 'PendaftaranController@ubahstatus')->name('ubahstatus');
+    Route::get('/pendaftaran/{pendaftaran}/formulir/create', 'PendaftaranController@create_formulir')->name('formulir.create');
+    Route::post('/pendaftaran/{pendaftaran}/formulir/store', 'PendaftaranController@store_formulir')->name('formulir.store');
+    Route::get('/pendaftaran/{pendaftaran}/formulir/{formulir}/edit', 'PendaftaranController@edit_formulir')->name('formulir.edit');
+    Route::patch('/pendaftaran/{pendaftaran}/formulir/{formulir}/update', 'PendaftaranController@update_formulir')->name('formulir.update');
+    Route::delete('/pendaftaran/{formulir}/destroy_formulir', 'PendaftaranController@destroy_formulir')->name('formulir.destroy');
+    Route::get('/pendaftaran/{pendaftaran}/formulir/cetak_pendaftar', 'PendaftaranController@cetak_pendaftar')->name('pendaftaran.cetak');
+    Route::get('/pendaftaran/{pendaftaran}/formulir/{formulir}/cetak_formulir', 'PendaftaranController@cetak_formulir')->name('formulir.cetak');
     Route::resource('user', 'UserController');
 });

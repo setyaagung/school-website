@@ -32,7 +32,7 @@
                                 @foreach($pendaftaran as $pdt)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td><a href="">{{$pdt->tahun_ajaran}}</a></td>
+                                        <td><a href="{{route('pendaftaran.show', $pdt->id)}}">{{$pdt->tahun_ajaran}}</a></td>
                                         <td>{{\Date::parse($pdt->buka)->format('d F Y')}}</td>
                                         <td>{{\Date::parse($pdt->tutup)->format('d F Y')}}</td>
                                         <td>{{$pdt->kuota}}</td>

@@ -12,7 +12,7 @@
 					<div class="panel panel-headline">
 						<div class="panel-heading">
 							<h3 class="panel-title">Data Website MA Hidayatus Syubban Semarang</h3>
-							<p class="panel-subtitle">Periode: {{ \Carbon\Carbon::now()->format('d F Y')}}</p>
+							<p class="panel-subtitle">Periode: {{ \Date::now()->format('d F Y')}}</p>
 						</div>
 						<div class="panel-body">
 							<div class="row">
@@ -45,10 +45,10 @@
 								</div>
 								<div class="col-md-3">
 									<div class="metric">
-										<span class="icon"><i class="fa fa-bar-chart"></i></span>
+										<span class="icon"><i class="fa fa-inbox"></i></span>
 										<p>
-											<span class="number">0</span>
-											<span class="title">Penjualan</span>
+											<span class="number">{{ \DB::table('pendaftaran')->where('status',1)->count()}}</span>
+											<span class="title">PPDB Online</span>
 										</p>
 									</div>
 								</div>
