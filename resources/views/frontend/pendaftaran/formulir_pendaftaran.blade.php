@@ -20,17 +20,19 @@
                             <div class="alert alert-primary" role="alert">
                                 <a href="{{route('site.form.create',$pdt->id)}}">FORMULIR PENDAFTARAN ONLINE TAHUN AJARAN {{$pdt->tahun_ajaran}}</a>
                             </div>
+                            <div class="alert alert-info prosedur" role="alert">
+                                <ol>
+                                    <li><p>Kuota peserta didik baru berjumlah {{$pdt->kuota}} siswa</p></li>
+                                    <li><p>Pendaftaran peserta didik baru dibuka dari {{\Date::parse($pdt->buka)->format('d F Y')}} sampai {{\Date::parse($pdt->tutup)->format('d F Y')}}</p></li>
+                                    <li><p>Tekan formulir pendaftaran diatas untuk melakukan pendaftaran online.</p></li>
+                                    <li><p>Isikan biodata lengkap anda sesuai dengan yang diminta dalam formulir.</p></li>
+                                    <li><p>Jika semua sudah terisi lalu tekan daftar.</p></li>
+                                    <li><p>Jika kuota pendaftaran belum terpenuhi maka anda bisa langsung menuju ke sekolah untuk konfirmasi kelengkapan berkas.</p></li>
+                                    <li><p>Tetapi jika kuota pendaftaran sudah penuh maka anda berada pada daftar tunggu 1x24 jam jika pendaftar sebelum anda belum melakukan konfirmasi ke sekolah.</p></li>
+                                    <li><p>Untuk informasi lengkapnya anda bisa langsung menuju ke sekolah.</p></li>
+                                </ol>
+                            </div>
                         @endforeach
-                        <div class="alert alert-info prosedur" role="alert">
-                            <ol>
-                                <li><p>Tekan formulir pendaftaran diatas untuk melakukan pendaftaran online.</p></li>
-                                <li><p>Isikan biodata lengkap anda sesuai dengan yang diminta dalam formulir.</p></li>
-                                <li><p>Jika semua sudah terisi lalu tekan daftar.</p></li>
-                                <li><p>Jika kuota pendaftaran belum terpenuhi maka anda bisa langsung menuju ke sekolah untuk konfirmasi kelengkapan berkas.</p></li>
-                                <li><p>Tetapi jika kuota pendaftaran sudah penuh maka anda berada pada daftar tunggu 1x24 jam jika pendaftar sebelum anda belum melakukan konfirmasi ke sekolah.</p></li>
-                                <li><p>Untuk informasi lengkapnya anda bisa langsung menuju ke sekolah.</p></li>
-                            </ol>
-                        </div>
                     </div>
                 @else
                 <div class="col-lg-8">

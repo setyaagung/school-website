@@ -15,32 +15,11 @@
                 @include('frontend/sidebar')
                 
                 <div class="col-lg-8">
-                    <h6>LIST DATA PENDAFTAR</h6>
-                    <hr>
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <td>NO</td>
-                                <td>NAMA</td>
-                                <td>ASAL SEKOLAH</td>
-                                <td>STATUS</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>MUHAMMAD AGUNG SETYA BUDI</td>
-                                <td>SMP N 34 SEMARANG</td>
-                                <td>KONFIRMASI</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>MUHAMMAD AGUNG SETYA BUDI</td>
-                                <td>SMP N 34 SEMARANG</td>
-                                <td>KONFIRMASI</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    @foreach ($pendaftaran as $pdt)
+                        <div class="alert alert-primary" role="alert">
+                            <a href="{{route('site.list.pendaftar',$pdt->id)}}">LIST DATA PENDAFTARAN PPDB TAHUN AJARAN {{$pdt->tahun_ajaran}}</a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

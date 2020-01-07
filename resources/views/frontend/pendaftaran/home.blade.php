@@ -15,7 +15,17 @@
                 @include('frontend/sidebar')
                 
                 <div class="col-lg-8">
-                    <h5 style="margin-bottom:40px">PENDAFTARAN PESERTA DIDIK BARU (PPDB) MA HIDAYATUS SYUBBAN TAHUN 2020/2021</h5>
+                    @if ($message = Session::get('online'))
+                        <div class="alert alert-success">
+                            <strong>{{$message}}</strong>
+                        </div>
+                    @endif
+                    @if ($message = Session::get('tunggu'))
+                        <div class="alert alert-info">
+                            <strong>{{$message}}</strong>
+                        </div>
+                    @endif
+                    <h5 style="margin-bottom:40px">INFORMASI PENDAFTARAN PESERTA DIDIK BARU (PPDB) MA HIDAYATUS SYUBBAN SEMARANG</h5>
                     <div class="tempat">
                         <h6>A. TEMPAT PENDAFTARAN DAN INFORMASI</h6>
                         @foreach ($kontak as $k)
@@ -36,9 +46,9 @@
                     <div class="kuota">
                         <h6>C. KUOTA PENERIMAAN PESERTA DIDIK</h6>
                         <ul>
-                            <li>Rencana penerimaan 3 kelas</li>
-                            <li>Rencana jumlah siswa yang diterima 108 siswa</li>
-                            <li>Rencana masing - masing 1 kelas 36 siswa</li>
+                            <li>Rencana penerimaan 2 kelas</li>
+                            <li>Rencana jumlah siswa yang diterima 60 siswa</li>
+                            <li>Rencana masing - masing 1 kelas 30 siswa</li>
                         </ul>
                     </div>
                     <div class="biaya">

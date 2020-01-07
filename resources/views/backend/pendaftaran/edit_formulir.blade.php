@@ -219,6 +219,7 @@
                                                 <option value="">-- Pilih --</option>
                                                 <option value="DAFTAR ONLINE" @if($formulir->status_daftar == "DAFTAR ONLINE") selected @endif>DAFTAR ONLINE</option>
                                                 <option value="DAFTAR TEMPAT"  @if($formulir->status_daftar == "DAFTAR TEMPAT") selected @endif>DAFTAR TEMPAT</option>
+                                                <option value="DAFTAR TUNGGU"  @if($formulir->status_daftar == "DAFTAR TUNGGU") selected @endif>DAFTAR TUNGGU</option>
                                                 <option value="KONFIRMASI" @if($formulir->status_daftar == "KONFIRMASI") selected @endif>KONFIRMASI</option>
                                                 <option value="DAFTAR ULANG"  @if($formulir->status_daftar == "DAFTAR ULANG") selected @endif>DAFTAR ULANG</option>
                                                 <option value="DITERIMA" @if($formulir->status_daftar == "DITERIMA") selected @endif>DITERIMA</option>

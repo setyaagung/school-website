@@ -416,6 +416,8 @@ footer a:hover {
     background-image: linear-gradient(rgba(4, 9, 30, 0.7),
             rgba(4, 9, 30, 0.7)),
         url(/images/2.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .sambutan h3 {
@@ -490,6 +492,8 @@ a {
     background-image: linear-gradient(rgba(4, 9, 30, 0.7),
             rgba(4, 9, 30, 0.7)),
         url(/images/2.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .login h3 {
@@ -651,6 +655,10 @@ ol {
 
 .alert-primary a:hover {
     color: #4dbf1c !important;
+}
+
+strong {
+    font-family: "Roboto", sans-serif;
 }
 
 .widget-wrap .search-widget form.search-form input[type=text] {

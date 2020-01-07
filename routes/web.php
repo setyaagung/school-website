@@ -38,6 +38,7 @@ Route::get('/formulir-pendaftaran', 'SitePendaftaranController@formulir');
 Route::get('/formulir-pendaftaran/{pendaftaran}/daftar', 'SitePendaftaranController@site_create_formulir')->name('site.form.create');
 Route::post('/formulir-pendaftaran/{pendaftaran}/store', 'SitePendaftaranController@site_store_formulir')->name('site.form.store')->middleware('web');
 Route::get('/list_pendaftar', 'SitePendaftaranController@list_pendaftar');
+Route::get('/list_pendaftar/{pendaftaran}/list', 'SitePendaftaranController@list')->name('site.list.pendaftar');
 Route::get('/cari_formulir', 'SitePendaftaranController@cari_formulir');
 
 //backend

@@ -15,11 +15,16 @@
                 <div class="col-12 col-lg-8">
                     <p>Sebelum anda melakukan pendaftaran siswa baru secara online, anda diharuskan memasukkan email dan password yang benar sesuai akun anda. Jika anda belum memiliki akun silahkan pilih tombol daftar akun di bawah.</p>
                     <hr>
+                    @if ($message = Session::get('gagal'))
+                        <div class="alert alert-danger">
+                            <strong>{{$message}}</strong>
+                        </div>
+                    @endif
                     <form action="/postlogin" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
-                        <input type="email" name="email" class="form-control" placeholder="Email" value="{{old('email')}}">
+                            <input type="email" name="email" class="form-control" placeholder="Email" value="{{old('email')}}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
