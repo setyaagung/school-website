@@ -40,6 +40,7 @@ Route::post('/formulir-pendaftaran/{pendaftaran}/store', 'SitePendaftaranControl
 Route::get('/list_pendaftar', 'SitePendaftaranController@list_pendaftar');
 Route::get('/list_pendaftar/{pendaftaran}/list', 'SitePendaftaranController@list')->name('site.list.pendaftar');
 Route::get('/cari_formulir', 'SitePendaftaranController@cari_formulir');
+Route::get('/cari_formulir/{formulir}/cetak_formulir', 'SitePendaftaranController@cetak')->name('site.cetak.formulir');
 
 //backend
 Route::get('/admin', 'AuthController@admin')->name('login');

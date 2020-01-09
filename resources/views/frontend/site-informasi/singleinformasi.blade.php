@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <img src="{{$informasi->gambar}}" class="img-fluid" width="915px" height="500px">
-                <b>{{$informasi->created_at->format('d M Y')}} | By {{$informasi->user->name}}</b>
+                <b>{{\Date::parse($informasi->created_at)->format('d F Y')}} | By {{$informasi->user->nickname}}</b>
                 <p class="text-justify">{!!$informasi->isi!!}</p>
             </div>
             <hr class="hr">

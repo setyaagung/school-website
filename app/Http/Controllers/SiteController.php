@@ -13,6 +13,7 @@ class SiteController extends Controller
 {
     public function home()
     {
+        \Date::setLocale('id');
         $informasi = Informasi::orderBy('created_at', 'desc')->get();
         $staff = Staff::all();
         $kontak = Kontak::all();

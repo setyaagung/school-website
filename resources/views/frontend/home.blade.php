@@ -80,13 +80,14 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h3 style="margin-top: 35px">Informasi Terbaru</h3>
+                    <p class="info-terbaru">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum rerum recusandae, vel obcaecati corrupti facilis id repudiandae quasi eum laboriosam a saepe in odit sit.</p>
                 </div>
             </div>
             <div class="owl-carousel owl-theme">
                 @foreach($informasi as $info)
                 <div class="item">
                     <a href="{{route('site.single.informasi', $info->slug)}}"><img src="{{$info->gambar()}}" alt="Informasi" class="img-fluid"></a>
-                    <p>{{$info->created_at->format('d M Y')}} | By {{$info->user->nickname}}</p>
+                    <p>{{\Date::parse($info->created_at)->format('d F Y')}} | By {{$info->user->nickname}}</p>
                     <a href="{{route('site.single.informasi', $info->slug)}}"><h6>{{$info->judul}}</h6></a>
                     <hr>
                     <p style="margin-top: -10px;">{!!substr($info->isi,0,130)!!}...</p>

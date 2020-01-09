@@ -18,6 +18,7 @@ class SiteInformasiController extends Controller
     }
     public function singleinformasi($slug)
     {
+        \Date::setLocale('id');
         $informasi = Informasi::where('slug', $slug)->first();
         $next = Informasi::where('id', '>', $informasi->id)->orderBy('id')->first();
         $previous = Informasi::where('id', '<', $informasi->id)->orderBy('id', 'desc')->first();

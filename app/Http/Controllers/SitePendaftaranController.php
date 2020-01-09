@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Kontak;
 use App\Pendaftaran;
 use App\Formulir;
+use PDF;
 use Illuminate\Http\Request;
 
 class SitePendaftaranController extends Controller
@@ -127,5 +128,11 @@ class SitePendaftaranController extends Controller
             $formulir = Formulir::orderBy('created_at', 'asc')->paginate(15);
         }
         return view('frontend/pendaftaran/cari_formulir', compact('formulir'));
+    }
+    public function cetak(Formulir $formulir)
+    {
+        \Date::setLocale('id');
+        $pdf = PDF::loadView('frontend/export/cetak_formulir', compact('formulir'))->setPaper('A4', 'portrait');
+        return $pdf->stream();
     }
 }
