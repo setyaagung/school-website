@@ -206,7 +206,7 @@ class PendaftaranController extends Controller
             'alamat_ibu' => 'required',
             'status_daftar' => 'required'
         ]);
-        $pendaftaran->formulir()->update($request->except('_token', '_method'));
+        $formulir->update($request->all());
         return redirect()->route('pendaftaran.show', $id)->with('update', 'Formulir pendaftaran yang dipilih berhasil diperbarui');
     }
     public function destroy_formulir($id)

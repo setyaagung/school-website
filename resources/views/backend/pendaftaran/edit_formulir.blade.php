@@ -15,7 +15,7 @@
 							<h3 class="panel-title">EDIT FORMULIR PPDB TAHUN AJARAN {{$pendaftaran->tahun_ajaran}}</h3>
 						</div>
 						<div class="panel-body">
-                            <form action="{{url('/administrator/pendaftaran/'.$pendaftaran->id.'/formulir/'.$formulir->id.'/update')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{url('/administrator/pendaftaran/'.$pendaftaran->id.'/formulir/'.$formulir->id.'/update')}}" method="POST">
                                 {{ csrf_field() }}
                                 @method('PATCH')
                                     <h5><b>A. BIODATA</b></h5>
@@ -212,6 +212,32 @@
                                             @error('alamat_ibu')
                                                 <span class="help-block">{{ $message }}</span>
                                             @enderror
+                                        </div>
+                                        
+                                    </div>
+                                    <h5><b>E. KELENGKAPAN BERKAS</b></h5>
+                                    <div style="margin-left:15px;margin-right:15px">
+                                        <div class="form-group">
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox" name="berkas[]">
+                                                <span> Pas photo ukuran 3 x 4 ( 3 lembar )</span>
+                                            </label>
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox">
+                                                <span> Foto copy raport SMP/MTs ( semester 1 sd 5 )</span>
+                                            </label>
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox">
+                                                <span> Foto copy SKHUN ( jika sudah ada ) yang sudah dilegalisir</span>
+                                            </label>
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox">
+                                                <span> Foto copy Ijazah ( jika sudah ada ) yang sudah dilegalisir</span>
+                                            </label>
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox">
+                                                <span> Foto copy Piagam penghargaan Akademik / Non Akademik( jika ada )</span>
+                                            </label>
                                         </div>
                                         <div class="form-group @error('status_daftar') has-error @enderror">
                                             <label class="form-ppdb">Status Daftar</label>

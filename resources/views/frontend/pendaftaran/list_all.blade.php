@@ -17,7 +17,6 @@
                 <div class="col-lg-8">
                     <h6>LIST DATA PENDAFTAR TAHUN AJARAN {{$pendaftaran->tahun_ajaran}}</h6>
                     <hr>
-                    @foreach ($pendaftaran->formulir as $form)
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -28,7 +27,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($formulir as $form)
+                            @foreach ($pendaftaran->formulir as $form)
                                 <tr>
                                     <td>{{$form->no_pendaftaran}}</td>
                                     <td>{{$form->nama}}</td>
@@ -38,7 +37,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    @endforeach
                 </div>
             </div>
         </div>

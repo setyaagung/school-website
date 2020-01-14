@@ -118,7 +118,7 @@ class SitePendaftaranController extends Controller
     public function list(Pendaftaran $pendaftaran)
     {
         $formulir = Formulir::all();
-        return view('frontend/pendaftaran/list', compact('pendaftaran', 'formulir'));
+        return view('frontend/pendaftaran/list_all', compact('pendaftaran', 'formulir'));
     }
     public function cari_formulir(Request $request)
     {
