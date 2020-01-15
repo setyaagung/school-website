@@ -219,23 +219,23 @@
                                     <div style="margin-left:15px;margin-right:15px">
                                         <div class="form-group">
                                             <label class="fancy-checkbox">
-                                                <input type="checkbox" name="berkas[]">
+                                                <input type="checkbox" name="berkas[]" value="foto" {{in_array("foto",$berkas)? "checked":""}}>
                                                 <span> Pas photo ukuran 3 x 4 ( 3 lembar )</span>
                                             </label>
                                             <label class="fancy-checkbox">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="berkas[]" value="raport" {{in_array("raport",$berkas)? "checked":""}}>
                                                 <span> Foto copy raport SMP/MTs ( semester 1 sd 5 )</span>
                                             </label>
                                             <label class="fancy-checkbox">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="berkas[]" value="skhun" {{in_array("skhun",$berkas)? "checked":""}}>
                                                 <span> Foto copy SKHUN ( jika sudah ada ) yang sudah dilegalisir</span>
                                             </label>
                                             <label class="fancy-checkbox">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="berkas[]" value="ijasah" {{in_array("ijasah",$berkas)? "checked":""}}>
                                                 <span> Foto copy Ijazah ( jika sudah ada ) yang sudah dilegalisir</span>
                                             </label>
                                             <label class="fancy-checkbox">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="berkas[]" value="piagam" {{in_array("piagam",$berkas)? "checked":""}}>
                                                 <span> Foto copy Piagam penghargaan Akademik / Non Akademik( jika ada )</span>
                                             </label>
                                         </div>

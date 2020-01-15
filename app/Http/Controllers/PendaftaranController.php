@@ -179,11 +179,13 @@ class PendaftaranController extends Controller
     }
     public function edit_formulir(Pendaftaran $pendaftaran, Formulir $formulir)
     {
-        return view('backend/pendaftaran/edit_formulir', compact('pendaftaran', 'formulir'));
+        $berkas = explode(",", $formulir->berkas);
+        //dd($berkas);
+        //exit;
+        return view('backend/pendaftaran/edit_formulir', compact('pendaftaran', 'formulir', 'berkas'));
     }
-    public function update_formulir(Request $request, $id, Formulir $formulir)
+    public function update_formulir(Request $request, Pendaftaran $pendaftaran, Formulir $formulir)
     {
-        $pendaftaran = Pendaftaran::find($id);
         $request->validate([
             'nama' => 'required',
             'tempat_lahir' => 'required',
@@ -206,8 +208,30 @@ class PendaftaranController extends Controller
             'alamat_ibu' => 'required',
             'status_daftar' => 'required'
         ]);
-        $formulir->update($request->all());
-        return redirect()->route('pendaftaran.show', $id)->with('update', 'Formulir pendaftaran yang dipilih berhasil diperbarui');
+        $formulir->update([
+            'nama' => $request->nama,
+            'tempat_lahir' => $request->tempat_lahir,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'agama' => $request->agama,
+            'status_keluarga' => $request->status_keluarga,
+            'jml_saudara' => $request->jml_saudara,
+            'alamat' => $request->alamat,
+            'asal_sekolah' => $request->asal_sekolah,
+            'ijasah' => $request->ijasah,
+            'nisn' => $request->nisn,
+            'nama_ayah' => $request->nama_ayah,
+            'agama_ayah' => $request->agama_ayah,
+            'pekerjaan_ayah' => $request->pekerjaan_ayah,
+            'alamat_ayah' => $request->alamat_ayah,
+            'nama_ibu' => $request->nama_ibu,
+            'agama_ibu' => $request->agama_ibu,
+            'pekerjaan_ibu' => $request->pekerjaan_ibu,
+            'alamat_ibu' => $request->alamat_ibu,
+            'berkas' => implode(",", $request->berkas),
+            'status_daftar' => $request->status_daftar,
+        ]);
+        return redirect()->route('pendaftaran.show', $pendaftaran->id)->with('update', 'Formulir pendaftaran yang dipilih berhasil diperbarui');
     }
     public function destroy_formulir($id)
     {

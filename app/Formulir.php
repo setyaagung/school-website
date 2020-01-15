@@ -9,7 +9,7 @@ class Formulir extends Model
 {
     use AutoNumberTrait;
     protected $table = 'formulir';
-    protected $fillable = ['pendaftaran_id', 'user_id', 'no_pendaftaran', 'nama', 'tempat_lahir', 'tanggal_lahir', 'jenis_kelamin', 'agama', 'status_keluarga', 'jml_saudara', 'alamat', 'asal_sekolah', 'ijasah', 'nisn', 'nama_ayah', 'agama_ayah', 'pekerjaan_ayah', 'alamat_ayah', 'nama_ibu', 'agama_ibu', 'pekerjaan_ibu', 'alamat_ibu', 'status_daftar'];
+    protected $fillable = ['pendaftaran_id', 'user_id', 'no_pendaftaran', 'nama', 'tempat_lahir', 'tanggal_lahir', 'jenis_kelamin', 'agama', 'status_keluarga', 'jml_saudara', 'alamat', 'asal_sekolah', 'ijasah', 'nisn', 'nama_ayah', 'agama_ayah', 'pekerjaan_ayah', 'alamat_ayah', 'nama_ibu', 'agama_ibu', 'pekerjaan_ibu', 'alamat_ibu','berkas','status_daftar'];
 
     public function user()
     {
