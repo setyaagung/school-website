@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="brand">
-    <a href="#"><img src="{{asset('backend/assets/img/logo-dark.png')}}" alt="Klorofil Logo" class="img-responsive logo"></a>
+    <a href="#">MA HIDAYATUS SYUBBAN</a>
   </div>
   <div class="container-fluid">
     <div class="navbar-btn">

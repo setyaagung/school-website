@@ -167,9 +167,8 @@
             <p style="margin-top:80px">............................................................</p>
         </div>
         <div class="col-md-9 text-right">
-            <p>Semarang, ........................................{{\Date::now()->format('Y')}}</p>
-            <p style="margin-right:170px;margin-top:-15px">Pendaftar</p>
-            <p style="margin-top:55px">..................................................................</p>
+            <p>Semarang, {{\Date::now()->format('d F Y')}}<br>Pendaftar</p>
+            <p style="margin-top:55px">{{$formulir->nama}}</p>
         </div>
     </div>
 </body>

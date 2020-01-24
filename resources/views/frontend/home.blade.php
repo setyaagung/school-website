@@ -100,9 +100,9 @@
         </div>
     </section>
     <!-- kata-kata -->
-    <section class="slogan">
+    <!--<section class="slogan">
 
-    </section>
+    </section> -->
     <!-- staff -->
     <section id="staff" class="staff">
         <div class="container">
@@ -130,9 +130,9 @@
         </div>
     </section>
     <!-- kata-kata -->
-    <section class="slogan">
+    <!--<section class="slogan">
 
-    </section>
+    </section>-->
     <!-- kontak -->
     <section id="kontak" class="kontak">
         <div class="container">

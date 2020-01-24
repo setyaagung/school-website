@@ -71,10 +71,18 @@ class KontakController extends Controller
     {
         $request->validate([
             'nama_sekolah' => 'required',
+            'kata_sambutan' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
+            'sejarah_sekolah' => 'required',
             'alamat' => 'required',
             'email' => 'required|email',
             'telepon' => 'required|max:15|regex:/(0)[0-9]{9}/',
-            'fax' => 'required|max:15|regex:/(0)[0-9]{9}/'
+            'fax' => 'required|max:15|regex:/(0)[0-9]{9}/',
+            'facebook' => 'required',
+            'twitter' => 'required',
+            'instagram' => 'required',
+            'youtube' => 'required',
         ]);
         $kontak->update($request->all());
         return redirect()->back()->with('update', 'Data kontak sekolah berhasil diperbarui');

@@ -33,7 +33,6 @@
                         <div>
                             <button type="submit" class="btn main_btnLogin"><i class="fa fa-sign-in"></i> LOG IN</button>
                             <a href="/register" class=" btn main_btnDaftar"><i class="fa fa-user"></i> DAFTAR AKUN</a>
-                            <a href="#" class="forgot-password">Lupa Password ?</a>
                         </div>
                     </form>
                 </div>

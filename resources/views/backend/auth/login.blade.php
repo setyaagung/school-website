@@ -31,7 +31,7 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<div class="logo text-center"><img src="{{asset('backend/assets/img/logo-dark.png')}}" alt="Klorofil Logo"></div>
+								<h3 class="logo text-center">MA HIDAYATUS SYUBBAN</h3>
 								<p class="lead">Login to your account</p>
 							</div>
               				<form class="form-auth-small" action="/admin/postlogin" method="POST">

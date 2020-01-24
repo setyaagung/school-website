@@ -55,7 +55,7 @@
                     <div class="item">
                         @foreach($informasi as $info)
                         <a href="{{route('site.single.informasi', $info->slug)}}"><img src="{{$info->gambar()}}" alt="Informasi" class="img-fluid"></a>
-                        <p>{{$info->created_at->format('d M Y')}} | By {{$info->user->name}}</p>
+                        <p>{{$info->created_at->format('d M Y')}} | By {{$info->user->nickname}}</p>
                         <a href="{{route('site.single.informasi', $info->slug)}}"><h6>{{$info->judul}}</h6></a>
                         <hr>
                         <p style="margin-top: -10px;">{!!substr($info->isi,0,180)!!}...</p>

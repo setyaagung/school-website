@@ -10,28 +10,20 @@
     <section class="kata-sambutan">
         <div class="container">
             <div class="row">
+                @foreach ($kontak as $k)
                 <div class="col-md-1">
                     <h4>VISI</h4>
                 </div>
                 <div class="col-md-12">
-                    <p>Iman dan Taqwa Kuat, Ilmu Pengetahuan dan Teknologi Mantap (IMTAQ KUAT, IPTEK MANTAP).</p>
+                    <p>{!!$k->visi!!}</p>
                 </div>
                 <div class="col-md-1">
                     <h4>MISI</h4>
                 </div>
                 <div class="col-md-12">
-                    <ol>
-                        <li>
-                            <p class="text-justify">Memantapkan aqidah islam yang berhaluan ahlus sunah wal jamaah.</p>
-                        </li>
-                        <li>
-                            <p class="text-justify">Kreatif dan inovatif terhadap pemanfaatan iptek bagi agama, bangsa dan negara.</p>
-                        </li>
-                        <li>
-                            <p class="text-justify">Mewujudkan perilaku yang berakhlaqul karimah.</p>
-                        </li>
-                    </ol>
+                    <p>{!!$k->misi!!}</p>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>

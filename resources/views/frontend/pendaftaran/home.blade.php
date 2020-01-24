@@ -40,7 +40,7 @@
                         <h6>B. WAKTU PENDAFTARAN</h6>
                         <ul>
                             <li>Hari : Senin - Sabtu</li>
-                            <li>Waktu : Pukul 00.07 s/d 16.00 WIB</li>
+                            <li>Waktu : Pukul 07.00 s/d 16.00 WIB</li>
                         </ul>
                     </div>
                     <div class="kuota">

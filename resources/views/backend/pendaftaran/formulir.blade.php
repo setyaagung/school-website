@@ -10,7 +10,7 @@
                 <div class="col-md-12">
                     <div class="panel">
 						<div class="panel-heading">
-						    <h3 class="panel-title">Data Formulir PPDB Online</h3>
+                            <h3 class="panel-title">Data Formulir PPDB Online {{$pendaftaran->tahun_ajaran}}</h3>
                             <div class="right">
                                 <a href="{{route('pendaftaran.index')}}" class="btn btn-default btn-sm">Kembali</a>
                                 <a href="{{route('pendaftaran.cetak',$pendaftaran->id)}}" class="btn btn-danger btn-sm" target="_blank">Cetak</a>
