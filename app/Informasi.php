@@ -10,8 +10,9 @@ class Informasi extends Model
     use Sluggable;
 
     protected $table = 'informasi';
+    protected $primaryKey = 'id_informasi';
     protected $dates = ['created_at'];
-    protected $fillable = ['user_id', 'judul', 'kategori', 'isi', 'slug', 'gambar'];
+    protected $fillable = ['id_user', 'judul', 'kategori', 'isi', 'slug', 'gambar'];
 
     /**
      * Return the sluggable configuration array for this model.
@@ -29,7 +30,7 @@ class Informasi extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'id_user');
     }
 
     public function gambar()

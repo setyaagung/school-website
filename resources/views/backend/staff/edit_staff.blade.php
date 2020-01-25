@@ -11,12 +11,12 @@
                 <div class="col-md-12">
                     <div class="panel">
                       <div class="panel-heading">
-                          <h3 class="panel-title">EDIT GURU & KARYAWAN</h3>
+                            <h3 class="panel-title">EDIT GURU & KARYAWAN</h3>
                       </div>
                       <div class="panel-body">
                         <div class="row">
                             <div class="col-md-8">
-                                <form action="{{route('staff.update', $staff->id)}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('staff.update', $staff->id_staff)}}" method="POST" enctype="multipart/form-data">
                                     {{csrf_field()}}
                                     @method('PATCH')
                                     <div class="form-group @error('nama') has-error @enderror">

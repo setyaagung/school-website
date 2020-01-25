@@ -18,7 +18,8 @@ class User extends Authenticatable
      *
      * @var array
      */
-
+    protected $table = 'users';
+    protected $primaryKey = 'id_user';
     protected $fillable = [
         'role', 'fullname', 'nickname', 'email', 'password',
     ];
@@ -43,10 +44,10 @@ class User extends Authenticatable
 
     public function informasi()
     {
-        return $this->hasMany(Informasi::class);
+        return $this->hasMany(Informasi::class, 'id_user');
     }
     public function pendaftaran()
     {
-        return $this->hasMany(Pendaftaran::class);
+        return $this->hasMany(Pendaftaran::class, 'id_user');
     }
 }

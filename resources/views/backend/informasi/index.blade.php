@@ -34,8 +34,8 @@
                                         <td>{{$informasi->kategori}}</td>
                                         <td>{{$informasi->user->name}}</td>
                                         <td>
-                                            <form action="{{ route('informasi.destroy', $informasi->id)}}" method="POST">
-                                            <a href="{{route('informasi.edit', $informasi->id)}}" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="{{ route('informasi.destroy', $informasi->id_informasi)}}" method="POST">
+                                            <a href="{{route('informasi.edit', $informasi->id_informasi)}}" class="btn btn-sm btn-warning">Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</button>

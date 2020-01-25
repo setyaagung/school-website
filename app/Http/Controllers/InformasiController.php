@@ -47,7 +47,7 @@ class InformasiController extends Controller
             'judul' => $request->judul,
             'kategori' => $request->kategori,
             'isi' => $request->isi,
-            'user_id' => auth()->user()->id,
+            'id_user' => auth()->user()->id_user,
             'gambar' => $request->gambar,
 
         ]);

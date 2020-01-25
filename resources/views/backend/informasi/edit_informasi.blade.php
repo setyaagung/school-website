@@ -16,7 +16,7 @@
                       <div class="panel-body">
                         <div class="row">
                             <div class="col-md-8"> 
-                                <form action="{{route('informasi.update', $informasi->id)}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('informasi.update', $informasi->id_informasi)}}" method="POST" enctype="multipart/form-data">
                                     {{csrf_field()}}
                                     @method('PATCH')
                                     <div class="form-group @error('judul') has-error @enderror">
