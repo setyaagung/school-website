@@ -17,18 +17,21 @@ class SitePendaftaranController extends Controller
     }
     public function prosedur()
     {
-        return view('frontend/pendaftaran/prosedur_pendaftaran');
+        $kontak = Kontak::all();
+        return view('frontend/pendaftaran/prosedur_pendaftaran', compact('kontak'));
     }
     public function formulir()
     {
         \Date::setLocale('id');
+        $kontak = Kontak::all();
         $pendaftaran = Pendaftaran::where('status', 1)->get();
-        return view('frontend/pendaftaran/formulir_pendaftaran', compact('pendaftaran'));
+        return view('frontend/pendaftaran/formulir_pendaftaran', compact('pendaftaran', 'kontak'));
     }
     public function site_create_formulir($id)
     {
+        $kontak = Kontak::all();
         $pendaftaran = Pendaftaran::find($id);
-        return view('frontend/pendaftaran/input_formulir', compact('pendaftaran'));
+        return view('frontend/pendaftaran/input_formulir', compact('pendaftaran', 'kontak'));
     }
     public function site_store_formulir(Request $request, $id)
     {
@@ -54,10 +57,10 @@ class SitePendaftaranController extends Controller
             'pekerjaan_ibu' => 'required',
             'alamat_ibu' => 'required',
         ]);
-        if (Formulir::where('pendaftaran_id', $id)->count() >= $pendaftaran->kuota) {
+        if (Formulir::where('id_pendaftaran', $id)->count() >= $pendaftaran->kuota) {
             $formulir = Formulir::create([
-                'pendaftaran_id' => $id,
-                'user_id' => auth()->user()->id,
+                'id_pendaftaran' => $id,
+                'id_user' => auth()->user()->id_user,
                 'nama' => $request->nama,
                 'tempat_lahir' => $request->tempat_lahir,
                 'tanggal_lahir' => $request->tanggal_lahir,
@@ -83,8 +86,8 @@ class SitePendaftaranController extends Controller
             return redirect()->route('site.pendaftaran')->with('tunggu', 'Sukses Daftar Tunggu');
         } else {
             $formulir = Formulir::create([
-                'pendaftaran_id' => $id,
-                'user_id' => auth()->user()->id,
+                'id_pendaftaran' => $id,
+                'id_user' => auth()->user()->id_user,
                 'nama' => $request->nama,
                 'tempat_lahir' => $request->tempat_lahir,
                 'tanggal_lahir' => $request->tanggal_lahir,
@@ -112,27 +115,31 @@ class SitePendaftaranController extends Controller
     }
     public function list_pendaftar()
     {
-        $pendaftaran = Pendaftaran::all();
-        return view('frontend/pendaftaran/list_pendaftar', compact('pendaftaran'));
+        $kontak = Kontak::all();
+        $pendaftaran = Pendaftaran::paginate(5);
+        return view('frontend/pendaftaran/list_pendaftar', compact('pendaftaran', 'kontak'));
     }
     public function list(Pendaftaran $pendaftaran)
     {
-        $formulir = Formulir::all();
-        return view('frontend/pendaftaran/list_all', compact('pendaftaran', 'formulir'));
+        $kontak = Kontak::all();
+        $formulir = Formulir::paginate(15);
+        return view('frontend/pendaftaran/list_all', compact('pendaftaran', 'formulir', 'kontak'));
     }
     public function cari_formulir(Request $request)
     {
+        $kontak = Kontak::all();
         if ($request->has('cari')) {
             $formulir = Formulir::where('nama', 'LIKE', '%' . $request->cari . '%')->orderBy('created_at', 'asc')->paginate(15);
         } else {
             $formulir = Formulir::orderBy('created_at', 'asc')->paginate(15);
         }
-        return view('frontend/pendaftaran/cari_formulir', compact('formulir'));
+        return view('frontend/pendaftaran/cari_formulir', compact('formulir', 'kontak'));
     }
     public function cetak(Formulir $formulir)
     {
         \Date::setLocale('id');
-        $pdf = PDF::loadView('frontend/export/cetak_formulir', compact('formulir'))->setPaper('A4', 'portrait');
+        $kontak = Kontak::all();
+        $pdf = PDF::loadView('frontend/export/cetak_formulir', compact('formulir', 'kontak'))->setPaper('A4', 'portrait');
         return $pdf->stream();
     }
 }

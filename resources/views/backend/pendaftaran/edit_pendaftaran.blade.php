@@ -15,7 +15,7 @@
 							<h3 class="panel-title">EDIT PPDB ONLINE</h3>
 						</div>
 						<div class="panel-body">
-                            <form action="{{route('pendaftaran.update',$pendaftaran->id)}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{route('pendaftaran.update',$pendaftaran->id_pendaftaran)}}" method="POST" enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 @method('PATCH')
                                     <div class="form-group @error('tahun_ajaran') has-error @enderror">

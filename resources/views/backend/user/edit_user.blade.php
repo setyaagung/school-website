@@ -15,7 +15,7 @@
 							<h3 class="panel-title">EDIT PENGGUNA</h3>
 						</div>
 						<div class="panel-body">
-                            <form action="{{route('user.update', $user->id)}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{route('user.update', $user->id_user)}}" method="POST" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     @method('PATCH')
                                         <div class="form-group @error('fullname') has-error @enderror">

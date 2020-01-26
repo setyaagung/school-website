@@ -36,8 +36,8 @@
                                         <td>{{$user->nickname}}</td>
                                         <td>{{$user->email}}</td>
                                         <td>
-                                            <form action="{{ route('user.destroy', $user->id)}}" method="POST">
-                                            <a href="{{route('user.edit', $user->id)}}" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="{{ route('user.destroy', $user->id_user)}}" method="POST">
+                                            <a href="{{route('user.edit', $user->id_user)}}" class="btn btn-sm btn-warning">Edit</a>
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</button>

@@ -23,16 +23,18 @@
         <div class="upper-bar">
             <div class="container">
                 <div class="row">
+                    @foreach ($kontak as $k)
                     <div class="col-sm">
-                        <i class="fa fa-phone"></i> 024-09774888
-                        <i class="fa fa-envelope-o" style="margin-left:20px"></i> ma_hidsyubb@gmail.com
+                        <i class="fa fa-phone"></i> {{$k->telepon}}
+                        <i class="fa fa-envelope-o" style="margin-left:20px"></i> {{$k->email}}
                     </div>
                     <div class="col-sm kanan">
-                        <a href="#kontak"><span class="fa fa-facebook-square"></span></a>
-                        <a href="#kontak"><span class="fa fa-twitter-square"></span></a>
-                        <a href="#kontak"><span class="fa fa-instagram"></span></a>
-                        <a href="#kontak"><span class="fa fa-youtube-play"></span></a>
+                        <a href="{{$k->facebook}}"><span class="fa fa-facebook-square"></span></a>
+                        <a href="{{$k->twitter}}"><span class="fa fa-twitter-square"></span></a>
+                        <a href="{{$k->instagram}}"><span class="fa fa-instagram"></span></a>
+                        <a href="{{$k->youtube}}"><span class="fa fa-youtube-play"></span></a>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>

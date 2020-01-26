@@ -89,7 +89,7 @@ class UserController extends Controller
             'fullname' => 'required',
             'nickname' => 'required',
             'role' => 'required',
-            'email' => 'required|email|unique:users,email,' . $user->id . ',id',
+            'email' => 'required|email|unique:users,email,' . $user->id_user . ',id_user',
         ]);
         $user->update($request->all());
         return redirect()->route('user.index')->with('update', 'Data user berhasil diperbarui');

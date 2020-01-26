@@ -51,7 +51,7 @@
                                         <td>{{$form->nama}}</td>
                                         <td>{{$form->asal_sekolah}}</td>
                                         <td>{{$form->status_daftar}}</td>
-                                        <td><a href="{{route('site.cetak.formulir',$form->id)}}" target="_blank">Cetak Formulir</a></td>
+                                        <td><a href="{{route('site.cetak.formulir',$form->id_formulir)}}" target="_blank">Cetak Formulir</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

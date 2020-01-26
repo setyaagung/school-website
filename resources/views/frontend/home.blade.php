@@ -168,14 +168,14 @@
                         <i class="fa fa-fax float-left"></i>
                         <p>Fax<br>{{$k->fax}}</p>
                     </div>
-                    @endforeach
                     <p style="margin-left:20px">Sosial Media</p>
                     <div class="col-md">
-                        <a href="#kontak"><i class="fa fa-facebook"></i></a>
-                        <a href="#kontak"><i class="fa fa-twitter"></i></a>
-                        <a href="#kontak"><i class="fa fa-instagram"></i></a>
-                        <a href="#kontak"><i class="fa fa-youtube-play"></i></a>
+                        <a href="{{$k->facebook}}"><i class="fa fa-facebook"></i></a>
+                        <a href="{{$k->twitter}}"><i class="fa fa-twitter"></i></a>
+                        <a href="{{$k->instagram}}"><i class="fa fa-instagram"></i></a>
+                        <a href="{{$k->youtube}}"><i class="fa fa-youtube-play"></i></a>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>

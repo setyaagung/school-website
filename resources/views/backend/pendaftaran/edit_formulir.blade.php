@@ -15,7 +15,7 @@
 							<h3 class="panel-title">EDIT FORMULIR PPDB TAHUN AJARAN {{$pendaftaran->tahun_ajaran}}</h3>
 						</div>
 						<div class="panel-body">
-                            <form action="{{url('/administrator/pendaftaran/'.$pendaftaran->id.'/formulir/'.$formulir->id.'/update')}}" method="POST">
+                            <form action="{{url('/administrator/pendaftaran/'.$pendaftaran->id_pendaftaran.'/'.'formulir/'.$formulir->id_formulir.'/update')}}" method="POST">
                                 {{ csrf_field() }}
                                 @method('PATCH')
                                     <h5><b>A. BIODATA</b></h5>

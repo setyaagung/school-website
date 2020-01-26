@@ -17,7 +17,7 @@
                 <div class="col-lg-8">
                     <h6>FORMULIR PENDAFTARAN ONLINE</h6>
                     <hr>
-                    <form action="{{route('site.form.store',$pendaftaran->id)}}" method="POST">
+                    <form action="{{route('site.form.store',$pendaftaran->id_pendaftaran)}}" method="POST">
                         {{ csrf_field() }}
                         <h6>A. Biodata</h6>
                         <div class="container">

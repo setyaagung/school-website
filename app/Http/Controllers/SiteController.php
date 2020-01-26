@@ -21,7 +21,8 @@ class SiteController extends Controller
     }
     public function login()
     {
-        return view('frontend/auth/login');
+        $kontak = Kontak::all();
+        return view('frontend/auth/login', compact('kontak'));
     }
     public function postLogin(Request $request)
     {
@@ -37,7 +38,8 @@ class SiteController extends Controller
     }
     public function register()
     {
-        return view('frontend/auth/register');
+        $kontak = Kontak::all();
+        return view('frontend/auth/register', compact('kontak'));
     }
     public function postregister(Request $request)
     {
@@ -57,7 +59,7 @@ class SiteController extends Controller
         $user->remember_token = str_random(60);
         $user->save();
         //autologin
-        Auth::loginUsingId($user->id);
+        Auth::loginUsingId($user->id_user);
         return redirect('/');
     }
     public function logout()

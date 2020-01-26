@@ -15,7 +15,7 @@
 							<h3 class="panel-title">FORMULIR PPDB TAHUN AJARAN {{$pendaftaran->tahun_ajaran}}</h3>
 						</div>
 						<div class="panel-body">
-                            <form action="{{route('formulir.store',$pendaftaran->id)}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{route('formulir.store',$pendaftaran->id_pendaftaran)}}" method="POST" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                     <h5><b>A. BIODATA</b></h5>
                                     <div style="margin-left:15px;margin-right:15px">

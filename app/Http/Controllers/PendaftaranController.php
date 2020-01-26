@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Formulir;
 use App\Pendaftaran;
+use App\Kontak;
 use PDF;
 use Illuminate\Http\Request;
 
@@ -50,7 +51,7 @@ class PendaftaranController extends Controller
             'tahun_ajaran' => $request->tahun_ajaran,
             'buka' => $request->buka,
             'tutup' => $request->tutup,
-            'user_id' => auth()->user()->id,
+            'id_user' => auth()->user()->id_user,
             'kuota' => $request->kuota,
             'status' => 0,
         ]);
@@ -151,8 +152,8 @@ class PendaftaranController extends Controller
             'alamat_ibu' => 'required',
         ]);
         $formulir = Formulir::create([
-            'pendaftaran_id' => $id,
-            'user_id' => auth()->user()->id,
+            'id_pendaftaran' => $id,
+            'id_user' => auth()->user()->id_user,
             'nama' => $request->nama,
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
@@ -196,8 +197,8 @@ class PendaftaranController extends Controller
             'jml_saudara' => 'required',
             'alamat' => 'required',
             'asal_sekolah' => 'required',
-            'ijasah' => 'required|unique:formulir,ijasah,' . $formulir->id . ',id',
-            'nisn' => 'required|unique:formulir,nisn,' . $formulir->id . ',id',
+            'ijasah' => 'required|unique:formulir,ijasah,' . $formulir->id_formulir . ',id_formulir',
+            'nisn' => 'required|unique:formulir,nisn,' . $formulir->id_formulir . ',id_formulir',
             'nama_ayah' => 'required',
             'agama_ayah' => 'required',
             'pekerjaan_ayah' => 'required',
@@ -231,25 +232,28 @@ class PendaftaranController extends Controller
             'berkas' => implode(",", $request->berkas),
             'status_daftar' => $request->status_daftar,
         ]);
-        return redirect()->route('pendaftaran.show', $pendaftaran->id)->with('update', 'Formulir pendaftaran yang dipilih berhasil diperbarui');
+        return redirect()->route('pendaftaran.show', $pendaftaran->id_pendaftaran)->with('update', 'Formulir pendaftaran yang dipilih berhasil diperbarui');
     }
     public function destroy_formulir($id)
     {
-        $formulir = Formulir::where('id', $id);
+        $formulir = Formulir::where('id_formulir', $id);
         $formulir->delete();
         return redirect()->back()->with('delete', 'Formulir pendaftaran berhasil dihapus');
     }
     public function cetak_pendaftar($id)
     {
+        \Date::setLocale('id');
         $pendaftaran = Pendaftaran::find($id);
-        $formulir = Formulir::where('pendaftaran_id', $id);
-        $pdf = PDF::loadView('backend/export/cetak_pendaftar', compact('pendaftaran', 'formulir'))->setPaper('A4', 'portrait');
+        $formulir = Formulir::where('id_pendaftaran', $id);
+        $kontak = Kontak::all();
+        $pdf = PDF::loadView('backend/export/cetak_pendaftar', compact('pendaftaran', 'formulir', 'kontak'))->setPaper('A4', 'portrait');
         return $pdf->stream();
     }
     public function cetak_formulir(Pendaftaran $pendaftaran, Formulir $formulir)
     {
         \Date::setLocale('id');
-        $pdf = PDF::loadView('backend/export/cetak_formulir', compact('pendaftaran', 'formulir'))->setPaper('A4', 'portrait');
+        $kontak = Kontak::all();
+        $pdf = PDF::loadView('backend/export/cetak_formulir', compact('pendaftaran', 'formulir', 'kontak'))->setPaper('A4', 'portrait');
         return $pdf->stream();
     }
 }

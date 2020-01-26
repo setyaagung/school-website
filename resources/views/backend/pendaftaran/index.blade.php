@@ -32,20 +32,20 @@
                                 @foreach($pendaftaran as $pdt)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td><a href="{{route('pendaftaran.show', $pdt->id)}}">{{$pdt->tahun_ajaran}}</a></td>
+                                        <td><a href="{{route('pendaftaran.show', $pdt->id_pendaftaran)}}">{{$pdt->tahun_ajaran}}</a></td>
                                         <td>{{\Date::parse($pdt->buka)->format('d F Y')}}</td>
                                         <td>{{\Date::parse($pdt->tutup)->format('d F Y')}}</td>
                                         <td>{{$pdt->kuota}}</td>
                                         <td>
                                             @if ($pdt->status == 1)
-                                                <a href="{{route('ubahstatus', $pdt->id)}}" class="label label-success">AKTIF</a>
+                                                <a href="{{route('ubahstatus', $pdt->id_pendaftaran)}}" class="label label-success">AKTIF</a>
                                             @else
-                                                <a href="{{route('ubahstatus', $pdt->id)}}" class="label label-danger">TIDAK AKTIF</a>
+                                                <a href="{{route('ubahstatus', $pdt->id_pendaftaran)}}" class="label label-danger">TIDAK AKTIF</a>
                                             @endif
                                         </td>
                                         <td>
-                                            <form action="{{ route('pendaftaran.destroy', $pdt->id)}}" method="POST">
-                                            <a href="{{route('pendaftaran.edit', $pdt->id)}}" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="{{ route('pendaftaran.destroy', $pdt->id_pendaftaran)}}" method="POST">
+                                            <a href="{{route('pendaftaran.edit', $pdt->id_pendaftaran)}}" class="btn btn-sm btn-warning">Edit</a>
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</button>

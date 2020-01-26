@@ -31,8 +31,10 @@
         <h6>LEMBAGA PENDIDIKAN MA'ARIF NU KOTA SEMARANG</h6>
         <h4 style="margin-top:-5px">MA HIDAYATUS SYUBBAN</h4>
         <p style="margin-top:-8px;font-size:16px"><i>TERAKREDITASI A</i></p>
-        <p style="margin-top:-12px"><i>Akte Notaris No. 043 Tahun 1983</i></p>
-        <p style="margin-top:-12px">Jl. Kyai H. Zainuddin Raya No.1, Karangroto Genuk Kota Semarang, Telp. 024-76580104</p>
+        <p style="margin-top:-15px"><i>Akte Notaris No. 043 Tahun 1983</i></p>
+        @foreach ($kontak as $k)
+        <p style="margin-top:-15px">{{$k->alamat}}, Telp. {{$k->telepon}}</p>
+        @endforeach
         <hr style="border:2px solid">
         <hr style="border:1px solid;margin-top:-15px;">
     </div>
@@ -58,5 +60,11 @@
         @endforeach
         </tbody>
     </table>
+    <div class="row">
+        <div class="col-md-9 text-right">
+            <p>Semarang, {{\Date::now()->format('d F Y')}}<br>Kepala Sekolah</p>
+            <p style="margin-top:55px">KH. Muh. Shohib, M.Pd.i</p>
+        </div>
+    </div>
 </body>
 </html>

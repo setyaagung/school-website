@@ -11,7 +11,7 @@ class Pendaftaran extends Model
     protected $table = 'pendaftaran';
     protected $primaryKey = 'id_pendaftaran';
     protected $dates = ['buka', 'tutup'];
-    protected $fillable = ['user_id', 'tahun_ajaran', 'buka', 'tutup', 'kuota', 'status'];
+    protected $fillable = ['id_user', 'tahun_ajaran', 'buka', 'tutup', 'kuota', 'status'];
 
     public function user()
     {
