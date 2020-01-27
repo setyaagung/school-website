@@ -53,7 +53,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle {{ (request()->segment(1) == 'profil-sekolah') ? 'active' : ''}}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Tentang Sekolah
+                                Profil Sekolah
                             </a>
                             <div class="dropdown-menu animated fadeIn faster" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item {{ (request()->segment(2) == 'katasambutan') ? 'active' : ''}}" href="/profil-sekolah/katasambutan">Kata Sambutan</a>

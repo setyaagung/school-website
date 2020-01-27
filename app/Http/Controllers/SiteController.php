@@ -32,7 +32,7 @@ class SiteController extends Controller
             'role' => 'Siswa'
         ];
         if (Auth::attempt($credentials)) {
-            return redirect('/')->with('sukses', 'Selamat Datang Di MA Hidayatus Syubban');
+            return redirect('/pendaftaran')->with('sukses', 'Selamat Datang Di MA Hidayatus Syubban');
         }
         return redirect('/login')->with('gagal', 'email dan password anda tidak sesuai');
     }
@@ -60,7 +60,7 @@ class SiteController extends Controller
         $user->save();
         //autologin
         Auth::loginUsingId($user->id_user);
-        return redirect('/');
+        return redirect('/pendaftaran');
     }
     public function logout()
     {
