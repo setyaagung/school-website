@@ -37,7 +37,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $formulir->links() }}
                 </div>
             </div>
         </div>

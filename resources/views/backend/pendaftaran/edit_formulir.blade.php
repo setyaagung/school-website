@@ -103,7 +103,7 @@
                                         </div>
                                         <div class="form-group @error('ijasah') has-error @enderror">
                                             <label class="form-ppdb">Ijasah SMP/MTs</label>
-                                            <input type="number" class="form-control" name="ijasah" value="{{$formulir->ijasah}}">
+                                            <input type="text" class="form-control" name="ijasah" value="{{$formulir->ijasah}}">
                                             @error('ijasah')
                                                 <span class="help-block">{{ $message }}</span>
                                             @enderror

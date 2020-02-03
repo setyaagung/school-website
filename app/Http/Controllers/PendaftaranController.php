@@ -207,6 +207,7 @@ class PendaftaranController extends Controller
             'agama_ibu' => 'required',
             'pekerjaan_ibu' => 'required',
             'alamat_ibu' => 'required',
+            'berkas' => 'required',
             'status_daftar' => 'required'
         ]);
         $formulir->update([

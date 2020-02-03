@@ -18,11 +18,13 @@
                     @if ($message = Session::get('online'))
                         <div class="alert alert-success">
                             <strong>{{$message}}</strong>
+                            <p>Selamat anda berhasil melakukan pendaftaran siswa baru secara online. Silahkan menuju ke sekolah untuk melakukan konfirmasi pendaftaran dan melengkapi berkas.</p>
                         </div>
                     @endif
                     @if ($message = Session::get('tunggu'))
                         <div class="alert alert-info">
                             <strong>{{$message}}</strong>
+                            <p>Selamat anda berhasil melakukan pendaftaran siswa baru secara online. Anda masuk di daftar tunggu dikarenakan pendaftaran siswa telah memenuhi kuota. Silahkan menuju ke sekolah untuk mendapatkan informasi yang lebih lengkap.</p>
                         </div>
                     @endif
                     <h5 style="margin-bottom:40px">INFORMASI PENDAFTARAN PESERTA DIDIK BARU (PPDB) MA HIDAYATUS SYUBBAN SEMARANG</h5>

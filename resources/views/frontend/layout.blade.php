@@ -84,10 +84,6 @@
                                     <i class="fa fa-user"></i>{{Auth::user()->nickname}}
                                 </a>
                                 <div class="dropdown-menu animated fadeIn faster" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Profil Anda</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-key"></i>Ganti Password</a>
-                                    <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out"></i> Log out</a>
                                 </div>
                             </li>
