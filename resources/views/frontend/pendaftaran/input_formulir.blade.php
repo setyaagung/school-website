@@ -141,7 +141,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Ijasah SMP/MTs</label>
                                 <div class="col-sm-9">
-                                    <input type="number" class="form-control @error('ijasah') is-invalid @enderror" name="ijasah" value="{{old('ijasah')}}">
+                                    <input type="text" class="form-control @error('ijasah') is-invalid @enderror" name="ijasah" value="{{old('ijasah')}}">
                                     @error('ijasah')
                                         <div class="invalid-feedback">
                                             {{$message}}
