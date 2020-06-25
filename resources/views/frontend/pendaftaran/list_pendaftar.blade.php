@@ -17,7 +17,7 @@
                 <div class="col-lg-8">
                     @foreach ($pendaftaran as $pdt)
                         <div class="alert alert-primary" role="alert">
-                            <a href="{{route('site.list.pendaftar',$pdt->id_pendaftaran)}}">LIST DATA PENDAFTARAN PPDB TAHUN AJARAN {{$pdt->tahun_ajaran}}</a>
+                            <a href="{{route('site.list.pendaftar',$pdt->slug)}}">LIST DATA PENDAFTARAN PPDB TAHUN AJARAN {{$pdt->tahun_ajaran}}</a>
                         </div>
                     @endforeach
                     {{ $pendaftaran->links()}}

@@ -35,10 +35,10 @@ Route::get('/informasi/{slug}', [
 Route::get('/pendaftaran', 'SitePendaftaranController@index')->name('site.pendaftaran');
 Route::get('/prosedur_pendaftaran', 'SitePendaftaranController@prosedur');
 Route::get('/formulir-pendaftaran', 'SitePendaftaranController@formulir');
-Route::get('/formulir-pendaftaran/{pendaftaran}/daftar', 'SitePendaftaranController@site_create_formulir')->name('site.form.create');
+Route::get('/formulir-pendaftaran/{slug}/daftar', 'SitePendaftaranController@site_create_formulir')->name('site.form.create');
 Route::post('/formulir-pendaftaran/{pendaftaran}/store', 'SitePendaftaranController@site_store_formulir')->name('site.form.store')->middleware('web');
 Route::get('/list_pendaftar', 'SitePendaftaranController@list_pendaftar');
-Route::get('/list_pendaftar/pendaftaran/{pendaftaran}', 'SitePendaftaranController@list')->name('site.list.pendaftar');
+Route::get('/list_pendaftar/pendaftaran/{slug}', 'SitePendaftaranController@list')->name('site.list.pendaftar');
 Route::get('/cari_formulir', 'SitePendaftaranController@cari_formulir');
 Route::get('/cari_formulir/{formulir}/cetak_formulir', 'SitePendaftaranController@cetak')->name('site.cetak.formulir');
 

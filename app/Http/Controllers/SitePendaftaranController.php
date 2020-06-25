@@ -27,10 +27,10 @@ class SitePendaftaranController extends Controller
         $pendaftaran = Pendaftaran::where('status', 1)->get();
         return view('frontend/pendaftaran/formulir_pendaftaran', compact('pendaftaran', 'kontak'));
     }
-    public function site_create_formulir($id)
+    public function site_create_formulir($slug)
     {
         $kontak = Kontak::all();
-        $pendaftaran = Pendaftaran::find($id);
+        $pendaftaran = Pendaftaran::where('slug', $slug)->firstOrFail();
         return view('frontend/pendaftaran/input_formulir', compact('pendaftaran', 'kontak'));
     }
     public function site_store_formulir(Request $request, $id)
@@ -119,10 +119,11 @@ class SitePendaftaranController extends Controller
         $pendaftaran = Pendaftaran::paginate(5);
         return view('frontend/pendaftaran/list_pendaftar', compact('pendaftaran', 'kontak'));
     }
-    public function list(Pendaftaran $pendaftaran)
+    public function list($slug)
     {
         $kontak = Kontak::all();
         $formulir = Formulir::all();
+        $pendaftaran = Pendaftaran::where('slug', $slug)->firstOrFail();
         return view('frontend/pendaftaran/list_all', compact('pendaftaran', 'formulir', 'kontak'));
     }
     public function cari_formulir(Request $request)

@@ -7,6 +7,7 @@ use App\Pendaftaran;
 use App\Kontak;
 use PDF;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PendaftaranController extends Controller
 {
@@ -49,6 +50,7 @@ class PendaftaranController extends Controller
 
         $pendaftaran = Pendaftaran::create([
             'tahun_ajaran' => $request->tahun_ajaran,
+            'slug' => Str::slug($request->tahun_ajaran),
             'buka' => $request->buka,
             'tutup' => $request->tutup,
             'id_user' => auth()->user()->id_user,
@@ -96,7 +98,9 @@ class PendaftaranController extends Controller
             'tutup' => 'required',
             'kuota' => 'required'
         ]);
-        $pendaftaran->update($request->all());
+        $data = $request->all();
+        $data['slug'] = Str::slug($request->tahun_ajaran);
+        $pendaftaran->update($data);
         return redirect()->route('pendaftaran.index')->with('create', 'pendaftaran berhasil diperbarui');
     }
 

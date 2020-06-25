@@ -18,7 +18,7 @@
                     <div class="col-lg-8 text-center">
                         @foreach ($pendaftaran as $pdt)
                             <div class="alert alert-primary" role="alert">
-                                <a href="{{route('site.form.create',$pdt->id_pendaftaran)}}">FORMULIR PENDAFTARAN ONLINE TAHUN AJARAN {{$pdt->tahun_ajaran}}</a>
+                                <a href="{{route('site.form.create',$pdt->slug)}}">FORMULIR PENDAFTARAN ONLINE TAHUN AJARAN {{$pdt->tahun_ajaran}}</a>
                             </div>
                             <div class="alert alert-info prosedur" role="alert">
                                 <ol>

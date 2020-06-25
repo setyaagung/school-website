@@ -19,7 +19,7 @@
                                 {{ csrf_field() }}
                                     <div class="form-group @error('tahun_ajaran') has-error @enderror">
                                         <label><b>Tahun Ajaran</b></label>
-                                        <input type="text" class="form-control" name="tahun_ajaran" placeholder="ex: 2018/2019" value="{{old('tahun_ajaran')}}">
+                                        <input type="text" class="form-control" name="tahun_ajaran" placeholder="ex: 2018-2019" value="{{old('tahun_ajaran')}}">
                                         @error('tahun_ajaran')
                                             <span class="help-block">{{ $message }}</span>
                                         @enderror
