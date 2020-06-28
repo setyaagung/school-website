@@ -14,8 +14,8 @@ class CreateInformasiTable extends Migration
     public function up()
     {
         Schema::create('informasi', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('user_id')->unsigned();
+            $table->bigIncrements('id_informasi');
+            $table->integer('id_user')->unsigned();
             $table->string('judul');
             $table->enum('kategori', ['berita', 'pengumuman']);
             $table->text('isi');

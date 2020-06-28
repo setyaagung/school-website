@@ -14,9 +14,9 @@ class CreateFormulirTable extends Migration
     public function up()
     {
         Schema::create('formulir', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('pendaftaran_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->bigIncrements('id_formulir');
+            $table->integer('id_pendaftaran')->unsigned();
+            $table->integer('id_user')->unsigned();
             $table->string('no_pendaftaran');
             $table->string('nama');
             $table->string('tempat_lahir');

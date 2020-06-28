@@ -14,8 +14,8 @@ class CreatePendaftaranTable extends Migration
     public function up()
     {
         Schema::create('pendaftaran', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('user_id')->unsigned();
+            $table->bigIncrements('id_pendaftaran');
+            $table->integer('id_user')->unsigned();
             $table->string('tahun_ajaran');
             $table->string('slug');
             $table->date('buka');
