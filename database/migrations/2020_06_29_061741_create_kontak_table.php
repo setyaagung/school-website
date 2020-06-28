@@ -16,10 +16,18 @@ class CreateKontakTable extends Migration
         Schema::create('kontak', function (Blueprint $table) {
             $table->bigIncrements('id_kontak');
             $table->string('nama_sekolah');
+            $table->text('kata_sambutan');
+            $table->text('visi');
+            $table->text('misi');
+            $table->text('sejarah_sekolah');
             $table->text('alamat');
             $table->string('email');
             $table->string('telepon');
             $table->string('fax');
+            $table->text('facebook');
+            $table->text('twitter');
+            $table->text('instagram');
+            $table->text('youtube');
             $table->timestamps();
         });
     }
