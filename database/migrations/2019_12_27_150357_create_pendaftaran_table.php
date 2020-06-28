@@ -17,6 +17,7 @@ class CreatePendaftaranTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned();
             $table->string('tahun_ajaran');
+            $table->string('slug');
             $table->date('buka');
             $table->date('tutup');
             $table->integer('kuota');
