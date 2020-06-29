@@ -125,7 +125,7 @@ button {
     min-height: 655px;
     background: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)),
-        url(/images/5.jpg);
+        url(/images/5.jpg) no-repeat scroll;
     background-size: cover;
     background-position: center;
 }
@@ -819,6 +819,16 @@ thead {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 576px) {
+    .jumbotron.a {
+        min-height: 665px;
+        min-width: auto;
+        background: linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url(/images/5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
     .upper-bar {
         text-align: left;
     }
