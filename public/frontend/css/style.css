@@ -122,12 +122,12 @@ button {
 }
 
 .jumbotron.a {
+    min-height: 655px;
     background: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)),
-        url(/images/5.jpg) no-repeat scroll;
+        url(/images/5.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 655px;
 }
 
 .jumbotron h3 {
