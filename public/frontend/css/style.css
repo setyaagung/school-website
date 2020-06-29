@@ -820,7 +820,7 @@ thead {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 576px) {
     .jumbotron.a {
-        min-height: 665px;
+        min-height: 675px;
         width: auto !important;
         background: linear-gradient(rgba(0, 0, 0, 0.5),
                 rgba(0, 0, 0, 0.5)),
