@@ -1,6 +1,8 @@
 body {
     font-family: "Viga", sans-serif;
     background-color: #f9f9ff;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .upper-bar {
