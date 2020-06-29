@@ -1,8 +1,6 @@
 body {
     font-family: "Viga", sans-serif;
     background-color: #f9f9ff;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 .upper-bar {
@@ -124,12 +122,12 @@ button {
 }
 
 .jumbotron.a {
-    min-height: 655px;
     background: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)),
         url(/images/5.jpg) no-repeat scroll;
     background-size: cover;
     background-position: center;
+    min-height: 655px;
 }
 
 .jumbotron h3 {
@@ -821,22 +819,16 @@ thead {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 576px) {
-    .jumbotron.a {
-        min-height: 675px;
-        width: auto !important;
-        background: linear-gradient(rgba(0, 0, 0, 0.5),
-                rgba(0, 0, 0, 0.5)),
-            url(/images/5.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-
     .upper-bar {
         text-align: left;
     }
 
     .upper-bar .kanan {
         text-align: right;
+    }
+
+    .jumbotron.a {
+        min-height: 665px;
     }
 
     .row.justify-content-center.e-2 {
@@ -855,11 +847,6 @@ thead {
         position: relative;
         -webkit-transition: all 0.3s linear;
         transition: all 0.3s linear;
-    }
-
-    iframe {
-        width: 550px;
-        height: 450px;
     }
 
     .kata-sambutan .row {
