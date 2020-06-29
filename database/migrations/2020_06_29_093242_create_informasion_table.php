@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInformasiTable extends Migration
+class CreateInformasionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class CreateInformasiTable extends Migration
     {
         Schema::create('informasi', function (Blueprint $table) {
             $table->bigIncrements('id_informasi');
-            $table->integer('id_user')->unsigned();
+            $table->bigInteger('id_user')->unsigned();
             $table->string('judul');
             $table->enum('kategori', ['berita', 'pengumuman']);
             $table->text('isi');
