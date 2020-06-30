@@ -63,11 +63,11 @@
 	<script src="{{asset('backend/assets/vendor/jquery/jquery.min.js')}}"></script>
 	<script src="{{asset('backend/assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 	<script src="{{asset('backend/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
-  <script src="{{asset('backend/assets/scripts/klorofil-common.js')}}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-  <script src="{{asset('backend/assets/js/ckeditor.js')}}"></script>
-  <script>
+  	<script src="{{asset('backend/assets/scripts/klorofil-common.js')}}"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  	<script src="{{asset('backend/assets/js/ckeditor.js')}}"></script>
+  	<script>
 		@if (Session::has('create'))
 			toastr.success("{{Session::get('create')}}", "Sukses");
 		@endif
@@ -91,6 +91,7 @@
 		@if (Session::has('error'))
 			toastr.error("{{Session::get('error')}}", "Sudah Ada");
 		@endif
+
 	</script>
 	<script>
 		$(document).ready( function () {

@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="{{asset('backend/assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('backend/assets/vendor/font-awesome/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{asset('backend/assets/vendor/linearicons/style.css')}}">
+	<link rel="stylesheet" href="{{asset('backend/assets/vendor/toastr/toastr.min.css')}}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="{{asset('backend/assets/css/main.css')}}">
 	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
@@ -66,12 +68,12 @@
   <script src="{{asset('backend/assets/vendor/jquery/jquery.min.js')}}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 	<script>
-		@if (Session::has('failed'))
-			toastr.error("{{Session::get('failed')}}", "Gagal");
+		@if (Session::has('success'))
+			toastr.success("{{Session::get('success')}}", "Berhasil!");
 		@endif
 
-		@if (Session::has('sukses'))
-			toastr.success("{{Session::get('sukses')}}", "Sukses");
+		@if (Session::has('failed'))
+			toastr.error("{{Session::get('failed')}}", "Gagal!");
 		@endif
 	</script>
 </body>

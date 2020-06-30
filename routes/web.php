@@ -62,4 +62,5 @@ Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'checkRole:A
     Route::get('/pendaftaran/{pendaftaran}/formulir/cetak_pendaftar', 'PendaftaranController@cetak_pendaftar')->name('pendaftaran.cetak');
     Route::get('/pendaftaran/{pendaftaran}/formulir/{formulir}/cetak_formulir', 'PendaftaranController@cetak_formulir')->name('formulir.cetak');
     Route::resource('user', 'UserController');
+    Route::patch('/changepassword', 'ChangePasswordController@changepassword')->name('changepassword.update');
 });
