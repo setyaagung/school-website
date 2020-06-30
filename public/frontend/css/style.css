@@ -900,7 +900,7 @@ thead {
 
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 575.98px) and (max-width: 991.98px) {
     iframe {
         width: 380px;
         height: 300px;
