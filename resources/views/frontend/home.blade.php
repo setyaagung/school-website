@@ -49,32 +49,32 @@
                     <img src="{{asset('images/uniform.png')}}" alt="Staff" class="float-left">
                     <h4>PRAMUKA</h4>
                 </div>
-                <div class="col-sm-6 col-lg-3 ekstra">
+                <div class="col-sm-6 col-lg-3 ekstra ekstra-mobile">
                     <img src="{{asset('images/parade.png')}}" alt="Staff" class="float-left">
                     <h4>MARCHING BAND</h4>
                 </div>
-                <div class="col-sm-6 col-lg-3 ekstra">
+                <div class="col-sm-6 col-lg-3 ekstra ekstra-mobile">
                     <img src="{{asset('images/karate.png')}}" alt="Staff" class="float-left">
                     <h4>PENCAK SILAT</h4>
                 </div>
             </div>
             <div class="row justify-content-center e-2">
-                <div class="col-sm-6 col-lg-3 ekstra">
+                <div class="col-sm-6 col-lg-3 ekstra ekstra-mobile">
                     <img src="{{asset('images/tambourine.png')}}" alt="Staff" class="float-left">
                     <h4>SENI REBANA</h4>
                 </div>
-                <div class="col-sm-6 col-lg-3 ekstra">
+                <div class="col-sm-6 col-lg-3 ekstra ekstra-mobile">
                     <img src="{{asset('images/computer.png')}}" alt="Staff" class="float-left">
                     <h4>KOMPUTER</h4>
                 </div>
-                <div class="col-sm-6 col-lg-3 ekstra">
+                <div class="col-sm-6 col-lg-3 ekstra ekstra-mobile">
                     <img src="{{asset('images/lecture.png')}}" alt="Staff" class="float-left">
                     <h4>ENGLISH CLUB</h4>
                 </div>
             </div>
         </div>
     </section>
-     <!-- informasi -->
+    <!-- informasi -->
     <section id="informasi" class="informasi">
         <div class="container">
             <div class="row">

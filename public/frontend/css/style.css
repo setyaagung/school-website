@@ -818,7 +818,7 @@ thead {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (max-width: 575.98px) {
+@media (min-width: 992px) {
     .upper-bar {
         text-align: left;
     }
@@ -847,11 +847,6 @@ thead {
         position: relative;
         -webkit-transition: all 0.3s linear;
         transition: all 0.3s linear;
-    }
-
-    iframe {
-        width: 380px;
-        height: 300px;
     }
 
     .kata-sambutan .row {
@@ -903,4 +898,15 @@ thead {
         margin-left: -40px;
     }
 
+}
+
+@media (max-width: 575.98px) {
+    iframe {
+        width: 380px;
+        height: 300px;
+    }
+
+    .ekstra-mobile {
+        margin-top: -40px;
+    }
 }
