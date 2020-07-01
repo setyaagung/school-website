@@ -901,10 +901,6 @@ thead {
 }
 
 @media (max-width: 575.98px) {
-    iframe {
-        width: 380px;
-        height: 300px;
-    }
 
     .ekstra-mobile {
         margin-top: -40px;
