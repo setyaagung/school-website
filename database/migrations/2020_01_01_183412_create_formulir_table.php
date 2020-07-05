@@ -27,7 +27,7 @@ class CreateFormulirTable extends Migration
             $table->integer('jml_saudara');
             $table->text('alamat');
             $table->string('asal_sekolah');
-            $table->integer('ijasah');
+            $table->string('ijasah');
             $table->integer('nisn');
             $table->string('nama_ayah');
             $table->string('agama_ayah');
@@ -37,6 +37,7 @@ class CreateFormulirTable extends Migration
             $table->string('agama_ibu');
             $table->string('pekerjaan_ibu');
             $table->text('alamat_ibu');
+            $table->string('berkas');
             $table->string('status_daftar');
             $table->timestamps();
         });
