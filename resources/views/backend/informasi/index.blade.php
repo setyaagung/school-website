@@ -32,7 +32,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{$informasi->judul}}</td>
                                         <td>{{$informasi->kategori}}</td>
-                                        <td>{{$informasi->user->name}}</td>
+                                        <td>{{$informasi->user->nickname}}</td>
                                         <td>
                                             <form action="{{ route('informasi.destroy', $informasi->id_informasi)}}" method="POST">
                                             <a href="{{route('informasi.edit', $informasi->id_informasi)}}" class="btn btn-sm btn-warning">Edit</a>
