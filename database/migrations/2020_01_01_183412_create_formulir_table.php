@@ -37,7 +37,7 @@ class CreateFormulirTable extends Migration
             $table->string('agama_ibu');
             $table->string('pekerjaan_ibu');
             $table->text('alamat_ibu');
-            $table->string('berkas');
+            $table->string('berkas')->nullable();
             $table->string('status_daftar');
             $table->timestamps();
         });
