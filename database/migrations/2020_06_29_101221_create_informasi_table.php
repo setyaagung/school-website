@@ -22,6 +22,7 @@ class CreateInformasiTable extends Migration
             $table->string('slug');
             $table->string('gambar')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
